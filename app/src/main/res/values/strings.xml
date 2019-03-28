@@ -1,15 +1,52 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">Farol</string>
+
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Username or Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_login">Sign in or register</string>
+    <string name="action_login_short">LOGIN</string>
+    <string name="action_login_with_facebook">LOGIN WITH FACEBOOK</string>
+    <string name="action_login_with_google">LOGIN WITH GOOGLE</string>
+        <!--Login validation-->
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
     </string>
+
+    <!-- Strings related to Main menu-->
+    <string name="prompt_explain_start">Click circle bellow for init your train!</string>
+    <string name="prompt_choose_language">I want to train:</string>
+    <string name="prompt_teach">Teach</string>
+        <!--Strings related to languages-->
+    <string name="prompt_english">English</string>
+    <string name="prompt_portuguese">Portuguese</string>
+
+    <!--String related to Chat-->
+    <string name="placeholder_reply">Reply</string>
+
+    <!--String related to dashboard-->
+    <string name="prompt_feedback">Feedback!</string>
+
+    <!--String related to Feedback-->
+    <string name="prompt_explain_skills">Choose good skils of this partner!</string>
+    <string name="prompt_explain_rank">Whats is your oppinion about this talk?</string>
+    <!--ps: use prompt_feedback for button feedback-->
+
+    <!--String related-->
+
+    <!--Strings related to common style-->
+    <string name="prompt_or">OR</string>
+        <!--Strings related to Subjects-->
+    <string name="prompt_pronuncy">Pronuncy</string>
+    <string name="prompt_Grammar">Grammar</string>
+    <string name="prompt_expressions">Expressions</string>
+    <string name="prompt_colors">Colors</string>
+    <string name="prompt_numbers">Numbers</string>
+    <string name="prompt_hours">Hours</string>
+
+
+    completions."
 </resources>
