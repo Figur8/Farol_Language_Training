@@ -8,7 +8,7 @@
     <string name="action_login_short">LOGIN</string>
     <string name="action_login_with_facebook">LOGIN WITH FACEBOOK</string>
     <string name="action_login_with_google">LOGIN WITH GOOGLE</string>
-        <!--Login validation-->
+    <!--Login validation-->
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
@@ -20,7 +20,7 @@
     <string name="prompt_explain_start">Click circle bellow for init your train!</string>
     <string name="prompt_choose_language">I want to train:</string>
     <string name="prompt_teach">Teach</string>
-        <!--Strings related to languages-->
+    <!--Strings related to languages-->
     <string name="prompt_english">English</string>
     <string name="prompt_portuguese">Portuguese</string>
 
@@ -39,13 +39,20 @@
 
     <!--Strings related to common style-->
     <string name="prompt_or">OR</string>
-        <!--Strings related to Subjects-->
+    <!--Strings related to Subjects-->
     <string name="prompt_pronuncy">Pronuncy</string>
     <string name="prompt_Grammar">Grammar</string>
     <string name="prompt_expressions">Expressions</string>
     <string name="prompt_colors">Colors</string>
     <string name="prompt_numbers">Numbers</string>
     <string name="prompt_hours">Hours</string>
+    <string name="title_activity_main_menu">mainMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 
     completions."
