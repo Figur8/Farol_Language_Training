@@ -1,59 +1,15 @@
 <resources>
-    <string name="app_name">Farol</string>
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">Username or Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_login">Sign in or register</string>
-    <string name="action_login_short">LOGIN</string>
-    <string name="action_login_with_facebook">LOGIN WITH FACEBOOK</string>
-    <string name="action_login_with_google">LOGIN WITH GOOGLE</string>
-    <!--Login validation-->
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-    </string>
-
-    <!-- Strings related to Main menu-->
-    <string name="prompt_explain_start">Click circle bellow for init your train!</string>
-    <string name="prompt_choose_language">I want to train:</string>
-    <string name="prompt_teach">Teach</string>
-    <!--Strings related to languages-->
-    <string name="prompt_english">English</string>
-    <string name="prompt_portuguese">Portuguese</string>
-
-    <!--String related to Chat-->
-    <string name="placeholder_reply">Reply</string>
-
-    <!--String related to dashboard-->
-    <string name="prompt_feedback">Feedback!</string>
-
-    <!--String related to Feedback-->
-    <string name="prompt_explain_skills">Choose good skils of this partner!</string>
-    <string name="prompt_explain_rank">Whats is your oppinion about this talk?</string>
-    <!--ps: use prompt_feedback for button feedback-->
-
-    <!--String related-->
-
-    <!--Strings related to common style-->
-    <string name="prompt_or">OR</string>
-    <!--Strings related to Subjects-->
-    <string name="prompt_pronuncy">Pronuncy</string>
-    <string name="prompt_Grammar">Grammar</string>
-    <string name="prompt_expressions">Expressions</string>
-    <string name="prompt_colors">Colors</string>
-    <string name="prompt_numbers">Numbers</string>
-    <string name="prompt_hours">Hours</string>
-    <string name="title_activity_main_menu">mainMenu</string>
+    <string name="app_name">FAROL</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Farol</string>
+    <string name="nav_header_subtitle">V.1.0.0</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
 
-
-    completions."
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard_text">Dashboard</string>
+    <string name="chat_text">CHAT</string>
 </resources>
