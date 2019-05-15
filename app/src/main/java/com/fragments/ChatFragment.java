@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-
+import android.widget.ListView;
+import com.models.Adpt;
+import com.models.Mesages;
 import com.pi4.farol.R;
 
 /**
@@ -18,11 +18,27 @@ import com.pi4.farol.R;
  */
 public class ChatFragment extends Fragment {
 
+    private ListView list;
+    private String[] msgs;
+    private Button btnSendMsg;
+    private EditText message;
+    private Mesages msg = new Mesages();
+    private Adpt adpt;
 
     public ChatFragment() {
         // Required empty public constructor
     }
 
+    View.OnClickListener inserir = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            msg.setTexto(message.getText().toString());
+            msgs = new String[]{msg.toString()};
+            adpt = new Adpt(getActivity(), msgs);
+            list.setAdapter(adpt);
+            message.setText("");
+        }
+    };
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,13 +48,12 @@ public class ChatFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_chat, container, false);
-            EditText edit_msg = v.findViewById(R.id.edit_msg_send);
-            TextView msgOne = v.findViewById(R.id.txt_chat_one);
-            TextView msgTwo = v.findViewById(R.id.txt_chat_two);
-            ImageView imgOne = v.findViewById(R.id.image_chat_one);
-            ImageView imgTwo = v.findViewById(R.id.image_chat_two);
-            Button btnSendMsg = v.findViewById(R.id.btn_send_msg);
+            list = v.findViewById(R.id.lv_chat);
+            btnSendMsg = v.findViewById(R.id.btn_send_msg);
+            message = v.findViewById(R.id.editMsg);
+            btnSendMsg.setOnClickListener(inserir);
         return v;
     }
+    //TODO - Arrumar o envio da mensagem, prrencher e adicionar as mensagens
 
 }

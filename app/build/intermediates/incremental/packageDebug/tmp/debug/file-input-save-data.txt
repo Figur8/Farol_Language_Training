@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun May 05 16:31:07 GMT-03:00 2019
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\Talita\\Desktop\\ProjetoIntegrador4\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+0.path=classes.dex
+0.set=DEX
+count=1
