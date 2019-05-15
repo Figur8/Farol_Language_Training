@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_feedback"
+        app:title="FeedBack"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <LinearLayout
+        android:id="@+id/layout_fb"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTitleFb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="@string/text_feedback_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Pronuncy"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_pronuncy"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Grammar"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_grammar"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Expressions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_expressions"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Colors"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_colors"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Numbers"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_numbers"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Hours"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/spinner_hours"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </LinearLayout>
+
+        <Button
+            android:text="@string/text_button_feedback"
+            android:background="@drawable/efeitos_loginbutton"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
