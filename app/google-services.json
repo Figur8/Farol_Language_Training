@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "827662796759",
+    "firebase_url": "https://farol-cecee.firebaseio.com",
+    "project_id": "farol-cecee",
+    "storage_bucket": "farol-cecee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827662796759:android:871fbd85c124d545",
+        "android_client_info": {
+          "package_name": "com.slumdev.farol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827662796759-6slq7c70jjbkap83cukad2cokk55glmh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.slumdev.farol",
+            "certificate_hash": "2b07f61677955ed12ba06bb10f7835e668a335f7"
+          }
+        },
+        {
+          "client_id": "827662796759-b0rgnqt6p1o9cld8pgft1ep3e4hhhcb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcu0QmFo0eIy5HCD0sMr5UXqOfX5LvQn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827662796759-b0rgnqt6p1o9cld8pgft1ep3e4hhhcb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
