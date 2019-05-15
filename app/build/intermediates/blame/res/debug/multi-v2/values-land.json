@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Talita\\Desktop\\ProjetoIntegrador4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Talita\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0-beta01.aar\\80b331e98610be42bda09579c9e9f82a\\res\\values-land\\values-land.xml",
+                    "source": "/root/.gradle/caches/transforms-2/files-2.1/fe6bad0e1e0dbdd2f83539cf2048b54a/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Talita\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\201944230fe3d05a32b799b1bfae91c5\\res\\values-land\\values-land.xml",
+                    "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

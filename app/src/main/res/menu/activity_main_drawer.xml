@@ -5,17 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_dashboard"
-            android:icon="@drawable/ic_dashboard"
-            android:title="Dashboard" />
-        <item
             android:id="@+id/nav_chat"
-            android:icon="@drawable/ic_chat"
-            android:title="Chat" />
+            android:icon="@drawable/ic_baseline_chat_24px"
+            android:title="@string/menu_chat" />
+        <item
+            android:id="@+id/nav_dash"
+            android:icon="@drawable/ic_baseline_dashboard_24px"
+            android:title="@string/menu_dash" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_exit_to_app"
-            android:title="Logout" />
+            android:icon="@drawable/ic_baseline_exit_to_app_24px"
+            android:title="@string/menu_logout" />
     </group>
 
 </menu>

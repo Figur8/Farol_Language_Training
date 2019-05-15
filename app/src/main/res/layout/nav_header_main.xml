@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!---  No NavigationView, você pode ver que adicionamos o atributo android:layout_gravity
+       com o valor start. Isso é usado para posicionar o Navigation Drawer saindo da esquerda,
+       se deseja que ele saia da direita utilize o valor end. No nosso caso ele sairá da esquerda.
+       Também incluímos o atributo app: headerLayout que aponta para @layout/nav_header.
+       Isto irá adicionar uma View como um cabeçalho do menu de navegação. -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,26 +20,27 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="52dp"
-        android:layout_height="60dp"
+        android:id="@+id/logo_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:layout_width="50dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/nav_header_title"
-        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="61dp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle"
-        android:textAlignment="center" />
+        android:text="@string/nav_header_subtitle" />
 
 </LinearLayout>

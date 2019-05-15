@@ -3,12 +3,14 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.pi4"
+        applicationId "com.slumdev.farol"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -19,23 +21,26 @@ android {
 }
 
 dependencies {
-
-    /* Para deixar os editText arredondados e outras customizações */
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
-
-    /* RecycleView custom */
-    implementation 'com.xwray:groupie:2.3.0'
-
-    /* Material Design */
-    //noinspection GradleCompatible
-    implementation 'com.google.android.material:material:1.0.0-beta01'
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'com.google.android.material:material:1.0.0-beta01'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+
+    //dependências do firebase
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    // Criação da lista de usuários
+    implementation 'com.google.firebase:firebase-firestore:19.0.0'
+
+    //Corrigir o erro de Multidex
+    implementation 'com.android.support:multidex:1.0.3'
 }
+// Playservice no modulo
+apply plugin: 'com.google.gms.google-services'
