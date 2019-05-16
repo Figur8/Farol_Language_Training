@@ -35,4 +35,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_text_feedback">Feedback</string>
+    <string name="text_register_password">Password</string>
+    <string name="text_register_email">Email</string>
+    <string name="text_register_username">Como quer ser chamado?</string>
+    <string name="text_register_button">Registrar</string>
+    <string name="text_select_image_register">Foto</string>
 </resources>

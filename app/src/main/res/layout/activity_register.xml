@@ -4,20 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_margin="20dp"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+<android.support.constraint.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/button_select_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/botao_foto"
+        android:textColor="@android:color/background_light"
+        android:text="@string/text_select_image_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="foto"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_user_register"
+        android:layout_margin="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="@+id/button_select_image"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_image"
+        app:layout_constraintStart_toStartOf="@+id/button_select_image"
+        app:layout_constraintTop_toTopOf="@+id/button_select_image"/>
+
+</android.support.constraint.ConstraintLayout>
+
     <TextView
         android:gravity="center"
         android:textStyle="bold"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Como quer ser chamado?"/>
+        android:text="@string/text_register_username"/>
 
     <EditText
         android:id="@+id/register_userName"
+        android:hint="usuário..."
+        android:textAlignment="center"
         android:layout_width="250dp"
         android:layout_height="wrap_content" />
 
@@ -26,10 +59,12 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="@string/text_register_email"/>
 
     <EditText
         android:id="@+id/register_userLogin"
+        android:hint="email..."
+        android:textAlignment="center"
         android:layout_width="250dp"
         android:layout_height="wrap_content" />
 
@@ -38,19 +73,23 @@
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"/>
+        android:text="@string/text_register_password"/>
 
     <EditText
         android:id="@+id/register_userPassword"
+        android:hint="password..."
+        android:textAlignment="center"
         android:layout_width="250dp"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btn_register"
-        android:text="Registrar"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_register_button"
+        android:textSize="15dp"
         android:background="@drawable/efeitos_loginbutton"
         android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
+import com.slumdev.farol.classes.Message;
+
 import java.util.List;
 
 public class MessageAdapter extends ArrayAdapter<Message> {
@@ -27,17 +29,17 @@ public class MessageAdapter extends ArrayAdapter<Message> {
         TextView text = null;
         Message message = mensagens.get(position);
 
-        convertView = inflater.inflate(R.layout.adpt_model_2,parent,false);
+        convertView = inflater.inflate(R.layout.adpt_model_reciver_msg,parent,false);
         text = convertView.findViewById(R.id.mensagem);
 
         // Testando qual usuário fez o login no app e modificando o layout de acordo
         if(message.getUserId().equals("enviador")){
-            convertView = inflater.inflate(R.layout.adpt_model_1,parent,false);
+            convertView = inflater.inflate(R.layout.adpt_model_send_msg,parent,false);
             text = convertView.findViewById(R.id.mensagem);
             text.setText(message.getTexto());
         }
         if(message.getTexto().isEmpty()){
-            convertView = inflater.inflate(R.layout.adpt_model_2,parent,false);
+            convertView = inflater.inflate(R.layout.adpt_model_reciver_msg,parent,false);
             text = convertView.findViewById(R.id.mensagem);
             text.setText("Mensagem recebida");
         }
@@ -47,7 +49,5 @@ public class MessageAdapter extends ArrayAdapter<Message> {
 
 }
 
-//TODO - Fazer com que o adpater reconheça o usuário logado e definir qual modelo aparensentar
-// se o usuário envia mensagem layout1 se recebe layout2.
-// Pesquisar como faço para as mensagens atualizarem automaticamente ao serem enviadas
+//TODO - Verificar usuário autenticado para definir qual layout será usado para enviar as msgs.
 

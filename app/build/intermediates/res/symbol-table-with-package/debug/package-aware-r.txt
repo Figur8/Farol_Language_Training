@@ -151,6 +151,11 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr circleCrop
+attr civ_border_color
+attr civ_border_overlay
+attr civ_border_width
+attr civ_circle_background_color
+attr civ_fill_color
 attr closeIcon
 attr closeIconEnabled
 attr closeIconEndPadding
@@ -1027,6 +1032,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable botao_foto
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1146,6 +1152,7 @@ id btn_login
 id btn_register
 id btn_send_msg
 id buttonPanel
+id button_select_image
 id cancel_action
 id center
 id center_horizontal
@@ -1203,8 +1210,10 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id image_user_register
 id imgLogo
 id imgMsg
+id img_contact
 id img_talk
 id info
 id invisible
@@ -1323,7 +1332,6 @@ id text_input_password_toggle
 id text_login_logo
 id text_register
 id text_talk
-id text_user
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1343,6 +1351,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id txtTitleFb
+id txt_name_contact
 id uniform
 id unlabeled
 id up
@@ -1408,9 +1417,9 @@ layout activity_feed_back
 layout activity_login
 layout activity_main
 layout activity_register
-layout adpt_model_1
-layout adpt_model_2
-layout adpt_model_user
+layout adpt_model_contact
+layout adpt_model_reciver_msg
+layout adpt_model_send_msg
 layout content_main
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1426,7 +1435,6 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
-layout fragment_main
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_main
@@ -1552,6 +1560,11 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string text_button_feedback
 string text_feedback_title
+string text_register_button
+string text_register_email
+string text_register_password
+string text_register_username
+string text_select_image_register
 string text_talk
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -2082,6 +2095,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color civ_fill_color
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha

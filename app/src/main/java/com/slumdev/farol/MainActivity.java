@@ -2,6 +2,8 @@ package com.slumdev.farol;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,11 +15,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.slumdev.farol.classes.User;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,6 +40,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        authVerify();
 
         // Este item é como se fosse um selectItem do html, precisamos instancialo como um listView
 
@@ -157,4 +163,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 }
-//TODO - Verificar porque está dando erro quando pressiono o botão para voltar.
+
+//TODO - Verificar qual a falha no Firebase. Não consigo registrar as imagens no FirestoreStorage
+// e nem consigo criar as coleções.

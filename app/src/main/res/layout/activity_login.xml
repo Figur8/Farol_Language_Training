@@ -43,6 +43,7 @@
     <Button
         android:id="@+id/btn_login"
         android:text="Login"
+        android:textSize="15dp"
         android:background="@drawable/efeitos_loginbutton"
         android:textColor="@android:color/white"
         android:layout_margin="10dp"

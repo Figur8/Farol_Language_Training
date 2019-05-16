@@ -56,10 +56,6 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/fe6bad0e1e0dbdd2f83539cf2048b54a/res/color-v23/design_tint_password_toggle.xml"
     },
     {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_user.xml.flat",
-        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_user.xml"
-    },
-    {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable_abc_spinner_textfield_background_material.xml.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable/abc_spinner_textfield_background_material.xml"
     },
@@ -226,6 +222,10 @@
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_send_msg.xml.flat",
+        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_send_msg.xml"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility.xml.flat",
@@ -414,10 +414,6 @@
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_1.xml.flat",
-        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_1.xml"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable_design_snackbar_background.xml.flat",
@@ -688,12 +684,12 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-ldrtl-xhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_checkbox.xml.flat",
@@ -912,6 +908,10 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable_botao_foto.xml.flat",
+        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/drawable/botao_foto.xml"
+    },
+    {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
@@ -1006,10 +1006,6 @@
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-v21_ic_menu_slideshow.xml.flat",
         "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/drawable-v21/ic_menu_slideshow.xml"
-    },
-    {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_2.xml.flat",
-        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_2.xml"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable_abc_btn_default_mtrl_shape.xml.flat",
@@ -1388,12 +1384,12 @@
         "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
-        "source": "/root/.gradle/caches/transforms-2/files-2.1/fe6bad0e1e0dbdd2f83539cf2048b54a/res/drawable-v21/avd_show_password.xml"
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_contact.xml.flat",
+        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_contact.xml"
     },
     {
-        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_fragment_main.xml.flat",
-        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/fragment_main.xml"
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-v21_avd_show_password.xml.flat",
+        "source": "/root/.gradle/caches/transforms-2/files-2.1/fe6bad0e1e0dbdd2f83539cf2048b54a/res/drawable-v21/avd_show_password.xml"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-v21_ic_menu_share.xml.flat",
@@ -1594,6 +1590,10 @@
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
         "source": "/root/.gradle/caches/transforms-2/files-2.1/3954d083a9518ae4fda02f4f83f0265f/res/drawable-xhdpi-v4/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/layout_adpt_model_reciver_msg.xml.flat",
+        "source": "/home/ismaelkofre/Downloads/PI4_Farol/app/src/main/res/layout/adpt_model_reciver_msg.xml"
     },
     {
         "merged": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",

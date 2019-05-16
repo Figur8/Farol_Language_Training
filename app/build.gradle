@@ -34,8 +34,13 @@ dependencies {
 
     //dependências do firebase
     implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.google.firebase:firebase-core:16.0.8'
+
+    /* deixar a imagem do perfil redonda */
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
     // Criação da lista de usuários
     implementation 'com.google.firebase:firebase-firestore:19.0.0'
 

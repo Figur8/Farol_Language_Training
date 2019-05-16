@@ -6,8 +6,8 @@
     density="hdpi"
     format="10"
     plugin-version="3.4.0"
-    timestamp="1557955805370"
-    token="-4272296167453484487"
+    timestamp="1557964701475"
+    token="187825758072065634"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
@@ -24,37 +24,37 @@
         duration="0" />
 
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
     <artifact
-        location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
         location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
@@ -62,40 +62,40 @@
 
     <build
         build-mode="FULL"
-        timestamp="1557955805370"
+        timestamp="1557964701475"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/home/ismaelkofre/Área de Trabalho/Farol v.1.0.3/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/instant-run-apk/debug/app-debug.apk"

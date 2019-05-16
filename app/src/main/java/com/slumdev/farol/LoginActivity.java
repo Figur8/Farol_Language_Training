@@ -52,6 +52,8 @@ public class LoginActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        onStart();
+
         imgLogo = findViewById(R.id.imgLogo);
         editLogin = findViewById(R.id.user_login);
         editPassword = findViewById(R.id.user_password);
@@ -122,5 +124,5 @@ public class LoginActivity extends AppCompatActivity  {
     }
 
 }
-//TODO - Arrumar o método de login baseado no firebase. Não consigo simular login e registro ao mesmo tempo
-// Fazer registro com email somente? Devemos efetuar login com Google ou Facebook? Enviar confirmação para o email?
+//TODO - Fazer registro com email somente? Devemos efetuar login com Google ou Facebook?
+// Enviar ou não confirmação para o email?
