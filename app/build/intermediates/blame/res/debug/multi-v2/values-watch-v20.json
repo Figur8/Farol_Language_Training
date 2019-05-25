@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/root/.gradle/caches/transforms-2/files-2.1/448a7377feac7a0ced3c95aa4d6d10b7/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\91945b35b68d34d7660afc141edae80e\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/root/.gradle/caches/transforms-2/files-2.1/252c843860e32e0519158030a41dda4d/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

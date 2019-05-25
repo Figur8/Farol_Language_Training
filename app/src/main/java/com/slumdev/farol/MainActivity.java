@@ -1,12 +1,11 @@
 package com.slumdev.farol;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -14,59 +13,77 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.slumdev.farol.classes.User;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
+
+import javax.annotation.Nullable;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Spinner spinner;
+    private ImageView talk;
+    ImageView imagemUsuarioLogado;
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
-    private ImageView talk;
-    private User user;
+    private TextView usuarioLogado;
+
 
     //Firebase
     private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private User user = new User();
 
+
+
+
+    View.OnClickListener toChat = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(MainActivity.this, ContactsActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(i);
+
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         authVerify();
+        fetchUsers();
 
         // Este item é como se fosse um selectItem do html, precisamos instancialo como um listView
-
         spinner = findViewById(R.id.option_language);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(MainActivity.this,
                 R.array.Langauges, android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         talk = findViewById(R.id.img_talk);
-        talk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ChatActivity.class);
-                startActivity(i);
-                //Toast.makeText(MainActivity.this, "Abriu Chat", Toast.LENGTH_SHORT).show();
-            }
-        });
+        talk.setOnClickListener(toChat);
+
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-
-
 
         /* O ActionBarDrawerToggle configura o ícone do aplicativo localizado à esquerda da barra
            de ação ou da barra de ferramentas para abrir e fechar o Navigation Drawer.
@@ -85,6 +102,10 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        View headerView = navigationView.getHeaderView(0);
+        usuarioLogado = headerView.findViewById(R.id.nomeUsuario);
+        imagemUsuarioLogado = headerView.findViewById(R.id.logo_imageView);
+
     }
 
     @Override
@@ -102,7 +123,6 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -110,6 +130,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_logout) {
             auth.signOut();
+            usuarioLogado.setText("usuário");
             finish();
             Intent i = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(i);
@@ -119,10 +140,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
             return true;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -135,34 +155,57 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_logout) {
             Toast.makeText(MainActivity.this, "Logout", Toast.LENGTH_SHORT).show();
         }else if (id == R.id.nav_chat){
-            getChat();
+            Intent i = new Intent(MainActivity.this, ContactsActivity.class);
+            startActivity(i);
+            finish();
         }
-
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
-    // Abrir activity do Chat
-    public void getChat(){
-        // Resgatando valores da classe User e enviando para a Activity Chat
-        //user = (User) getIntent().getExtras().get("currentUser");
-        Intent i = new Intent(MainActivity.this, ChatActivity.class);
-        //i.putExtra("id", user);
-        startActivity(i);
-    }
-
     // Verifico se já possuo um usuário autenticado
     public void authVerify(){
-        if(auth.getCurrentUser() == null){
+        // Se for nulo o usuário não está logado, retorna para a activity login
+        if(auth.getUid() == null){
             Intent i = new Intent(MainActivity.this, LoginActivity.class);
-            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
+            finish();
         }else{
-            Toast.makeText(MainActivity.this,"Usuário logado: "+ auth.getCurrentUser() , Toast.LENGTH_SHORT).show();
+            user.setUuid(auth.getUid());
+            Log.d("Usuario Logado: " , user.getUuid());
+//            fetchUsers();
+//          Toast.makeText(MainActivity.this,"Usuário logado: "+ auth.getCurrentUser() , Toast.LENGTH_SHORT).show();
         }
     }
-}
 
-//TODO - Verificar qual a falha no Firebase. Não consigo registrar as imagens no FirestoreStorage
-// e nem consigo criar as coleções.
+
+    /*
+    Aqui eu procuro os usuários na coleção do firebase, pra resgatar o nome de usuário e a imagem do perfil.
+    Usei uma classe que peguei no github chama Picasso, é pra setar a foto do banco no ImageView.
+     */
+    public void fetchUsers(){
+        FirebaseFirestore collectionsUsers = FirebaseFirestore.getInstance();
+        collectionsUsers.collection("/users")
+            .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                    if (e != null) {
+                        Log.e("Busca: ", e.getMessage());
+                        return;
+                    }
+                    List<DocumentSnapshot> docs = queryDocumentSnapshots.getDocuments();
+                    for (DocumentSnapshot doc : docs) {
+                        user = doc.toObject(User.class);
+                        if((user.getUuid()).equals(auth.getUid())){
+                            usuarioLogado.setText(user.getUsername());
+                            Picasso.get().load(user.getProfileUrl()).into(imagemUsuarioLogado);
+                            Log.d("Usuário: ",user.getUuid());
+                        }
+                    }
+                }
+            });
+    }
+
+
+}

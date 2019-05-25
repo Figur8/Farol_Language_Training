@@ -1,7 +1,7 @@
-#Wed May 15 20:55:29 BRT 2019
-base.0=/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/transforms/dexMerger/debug/10
+#Fri May 24 21:14:10 GMT-03:00 2019
+base.0=C\:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.1=classes2.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/ismaelkofre/Downloads/PI4_Farol/app/build/intermediates/transforms/dexMerger/debug/10
+base.1=C\:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10

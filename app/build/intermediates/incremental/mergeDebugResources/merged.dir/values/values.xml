@@ -631,6 +631,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="contatos">title_contacts_menu</string>
     <string name="default_web_client_id" translatable="false">827662796759-b0rgnqt6p1o9cld8pgft1ep3e4hhhcb1.apps.googleusercontent.com</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">android.support.design.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">android.support.design.transformation.FabTransformationSheetBehavior</string>
@@ -642,13 +643,16 @@
     <string name="google_storage_bucket" translatable="false">farol-cecee.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">android.support.design.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="logout">title_logout_menu</string>
     <string name="menu_chat">Chat</string>
+    <string name="menu_contacts">Contatos</string>
     <string name="menu_dash">Dashboard</string>
     <string name="menu_logout">Logout</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="nav_header_subtitle">A luz para seu estudo</string>
     <string name="nav_header_title">Farol</string>
+    <string name="nav_text_name_user">usuario</string>
     <string name="navigation_drawer_close">Fechar Navigation Drawer</string>
     <string name="navigation_drawer_open">Abrir Navigation Drawer</string>
     <string name="password_toggle_content_description">Show password</string>
@@ -659,12 +663,15 @@
     <string name="project_id" translatable="false">farol-cecee</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="text_activity_contacts">Contatos</string>
     <string name="text_button_feedback">FeedBack</string>
     <string name="text_feedback_title">Qualify the skills of this partner!</string>
     <string name="text_register_button">Registrar</string>
     <string name="text_register_email">Email</string>
     <string name="text_register_password">Password</string>
     <string name="text_register_username">Como quer ser chamado?</string>
+    <string name="text_return_chat">voltar</string>
+    <string name="text_return_contacts">voltar</string>
     <string name="text_select_image_register">Foto</string>
     <string name="text_talk">TALK</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -688,6 +695,12 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemeContacts" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>

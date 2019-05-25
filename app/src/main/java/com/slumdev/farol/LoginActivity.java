@@ -1,6 +1,7 @@
 package com.slumdev.farol;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.slumdev.farol.classes.User;
 
 public class LoginActivity extends AppCompatActivity  {
 
@@ -27,9 +28,8 @@ public class LoginActivity extends AppCompatActivity  {
 
     //Login com email e senha
     private FirebaseAuth userAuth = FirebaseAuth.getInstance();
-    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-
+    private User user = new User();
+    private String id;
 
     View.OnClickListener logar = new View.OnClickListener() {
         @Override
@@ -51,8 +51,6 @@ public class LoginActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        onStart();
 
         imgLogo = findViewById(R.id.imgLogo);
         editLogin = findViewById(R.id.user_login);
@@ -78,10 +76,13 @@ public class LoginActivity extends AppCompatActivity  {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if( task.isSuccessful()){
                         Log.d("Login: ", "LoginSucess");
-                        user = userAuth.getCurrentUser();
+                        user.setUuid(userAuth.getUid());
+                        id = user.getUuid();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();
+                        Log.d("Login: ", user.getUuid());
                     }else{
                         Log.w("Login: ", "Login Failure!", task.getException());
                         Toast.makeText(LoginActivity.this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
@@ -89,19 +90,6 @@ public class LoginActivity extends AppCompatActivity  {
                 }
             });
     }
-
-
-    // Verifico neste método de ínicio da activity se já tenho um usuário logado.
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if(user != null){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    }
-
 
     // Método que valida o login, passo neste método o método logarUsuário, caso a validação
     // seja positiva.

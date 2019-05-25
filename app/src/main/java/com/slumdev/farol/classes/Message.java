@@ -1,11 +1,10 @@
 package com.slumdev.farol.classes;
 
-import java.io.Serializable;
 
-public class Message implements Serializable {
-    private String userId;
+public class Message  {
     private String userName;
     private String texto;
+    private long timestamp;
     private String toId;
     private String fromId;
 
@@ -14,20 +13,20 @@ public class Message implements Serializable {
 
     }
 
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
+
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getTexto() {

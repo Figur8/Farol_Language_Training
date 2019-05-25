@@ -40,4 +40,11 @@
     <string name="text_register_username">Como quer ser chamado?</string>
     <string name="text_register_button">Registrar</string>
     <string name="text_select_image_register">Foto</string>
+    <string name="contatos">title_contacts_menu</string>
+    <string name="logout">title_logout_menu</string>
+    <string name="text_return_chat">voltar</string>
+    <string name="menu_contacts">Contatos</string>
+    <string name="text_return_contacts">voltar</string>
+    <string name="text_activity_contacts">Contatos</string>
+    <string name="nav_text_name_user">usuario</string>
 </resources>

@@ -71,6 +71,7 @@ android/support/design/widget/TabLayout$Mode.class
 android/support/design/widget/TabLayout$TabGravity.class
 android/support/design/widget/TabLayout$TabIndicatorGravity.class
 android/support/design/widget/TextInputLayout$BoxBackgroundMode.class
+android/support/media/ExifInterface$IfdType.class
 android/support/multidex/MultiDex$V14$ElementConstructor.class
 android/support/multidex/MultiDex$V14$ICSElementConstructor.class
 android/support/multidex/MultiDex$V14$JBMR11ElementConstructor.class
@@ -176,7 +177,6 @@ com/google/android/gms/common/zzc.class
 com/google/android/gms/common/zzm.class
 com/google/android/gms/flags/FlagSource.class
 com/google/android/gms/internal/auth/zzax.class
-com/google/android/gms/internal/measurement/zzaa.class
 com/google/android/gms/stats/CodePackage.class
 com/google/auto/value/AutoAnnotation.class
 com/google/auto/value/AutoOneOf.class

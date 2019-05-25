@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/voltar_contacts"
+        android:icon="@drawable/baseline_keyboard_arrow_left_black_24dp"
+        android:title="@string/logout"
+        app:showAsAction="always" />
+
+</menu>

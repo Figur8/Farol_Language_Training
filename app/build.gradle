@@ -20,8 +20,13 @@ android {
     }
 }
 
+// Playservice no modulo
+apply plugin: 'com.google.gms.google-services'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //RecycleView
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
@@ -31,15 +36,21 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
 
-
     //dependências do firebase
     implementation 'com.google.firebase:firebase-auth:17.0.0'
     implementation 'com.google.firebase:firebase-storage:17.0.0'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+
+    /* Biblioteca que configura o AdaptGroup para Recycle View */
+    implementation 'com.xwray:groupie:2.1.0'
+
+    /* Carregamento da imagem nos contatos*/
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     /* deixar a imagem do perfil redonda */
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
 
     // Criação da lista de usuários
     implementation 'com.google.firebase:firebase-firestore:19.0.0'
@@ -47,5 +58,4 @@ dependencies {
     //Corrigir o erro de Multidex
     implementation 'com.android.support:multidex:1.0.3'
 }
-// Playservice no modulo
-apply plugin: 'com.google.gms.google-services'
+apply plugin: "com.google.gms.google-services"

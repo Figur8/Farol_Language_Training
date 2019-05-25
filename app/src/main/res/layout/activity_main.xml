@@ -20,6 +20,7 @@
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <include layout="@layout/content_main"/>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
