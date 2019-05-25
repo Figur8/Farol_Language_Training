@@ -18,6 +18,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.slumdev.farol.classes.Contacts;
 import com.slumdev.farol.classes.User;
 import com.squareup.picasso.Picasso;
 import com.xwray.groupie.GroupAdapter;
@@ -54,6 +55,8 @@ public class ContactsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(@NonNull Item item, @NonNull View view) {
                 Intent i = new Intent(ContactsActivity.this, ChatActivity.class);
+                ContactItem contactItem = (ContactItem) item;
+                i.putExtra("userContact",contactItem.user);
                 i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(i);
             }
@@ -61,32 +64,25 @@ public class ContactsActivity extends AppCompatActivity {
         fetchUsers();
     }
 
-
-    // Travei aqui o botão de voltar... pra não gerar conflitos nas activitys
-    // Coloquei um botão de retorno na actiobar.
-    @Override
-    public void onBackPressed() {
-    }
-
     //Método para procurar contatos numa coleção no firestore
     private void fetchUsers() {
         fetchContacts.collection("/users")
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                        if (e != null) {
-                            Log.e("Busca: ", e.getMessage());
-                            return;
-                        }
-                        // Crio aqui uma lista que irá armazenar os documentos da coleção de usuários
-                        List<DocumentSnapshot> docs = queryDocumentSnapshots.getDocuments();
-                        for (DocumentSnapshot doc : docs) {
-                            User newUser = doc.toObject(User.class);
-                            Log.d("Usuário: ", newUser.getUsername());
-                            adapter.add(new ContactItem(newUser));
-                        }
-                    }
-                });
+        .addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                if (e != null) {
+                    Log.e("Busca: ", e.getMessage());
+                    return;
+                }
+                // Crio aqui uma lista que irá armazenar os documentos da coleção de usuários
+                List<DocumentSnapshot> docs = queryDocumentSnapshots.getDocuments();
+                for (DocumentSnapshot doc : docs) {
+                    User newUser = doc.toObject(User.class);
+                    Log.d("Usuário: ", newUser.getUsername());
+                    adapter.add(new ContactItem(newUser));
+                }
+            }
+        });
     }
 
     //Aqui está a classe interna que irá gerenciar cada item da lista
@@ -107,24 +103,20 @@ public class ContactsActivity extends AppCompatActivity {
             nomecontato.setText(user.getUsername());
             Picasso.get().load(user.getProfileUrl()).into(imagemcontato);
         }
-
-
-        // serve para modificar os itens da lista
+        // serve para modificar os layouts da lista
         @Override
         public int getLayout() {
             return R.layout.item_user;
         }
     }
 
-
-    // Criando o menu da ActionBar que criei acima
+    // Criando o menu da ActionBar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_contacts, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
@@ -132,8 +124,14 @@ public class ContactsActivity extends AppCompatActivity {
                 Intent i = new Intent(ContactsActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
-                return true;
+            return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    // Travei aqui o botão de voltar... pra não gerar conflitos nas activitys
+    // Coloquei um botão de retorno na actiobar.
+    @Override
+    public void onBackPressed() {
     }
 }

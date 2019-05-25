@@ -602,6 +602,7 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color background
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1216,8 +1217,8 @@ id ifRoom
 id image
 id imageContact
 id image_user_register
+id imagemMsg
 id imgLogo
-id imgMsg
 id img_talk
 id info
 id invisible
@@ -1231,7 +1232,6 @@ id light
 id line1
 id line3
 id listMode
-id list_chat
 id list_item
 id logo_imageView
 id masked
@@ -1273,6 +1273,7 @@ id right
 id right_icon
 id right_side
 id rv_contacts
+id rv_message_chat
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1426,8 +1427,6 @@ layout activity_feed_back
 layout activity_login
 layout activity_main
 layout activity_register
-layout adpt_model_reciver_msg
-layout adpt_model_send_msg
 layout contacts_itens
 layout content_main
 layout design_bottom_navigation_item
@@ -1444,6 +1443,8 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout item_from_msg
+layout item_to_msg
 layout item_user
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

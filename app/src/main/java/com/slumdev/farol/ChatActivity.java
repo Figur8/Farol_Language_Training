@@ -4,19 +4,25 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
@@ -25,6 +31,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.slumdev.farol.classes.Contacts;
 import com.slumdev.farol.classes.Message;
 import com.slumdev.farol.classes.User;
+import com.squareup.picasso.Picasso;
+import com.xwray.groupie.GroupAdapter;
+import com.xwray.groupie.Item;
+import com.xwray.groupie.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,51 +44,107 @@ import javax.annotation.Nullable;
 public class ChatActivity extends AppCompatActivity{
 
     private FirebaseFirestore colletctionConversas = FirebaseFirestore.getInstance();
+    private FirebaseFirestore collectionUsers = FirebaseFirestore.getInstance();
     private FirebaseAuth auth = FirebaseAuth.getInstance();
-    private User user = new User();
-    private User me = new User();
+    private EditText editdMsg;
+    private Button btnSendMsg;
+    private GroupAdapter adapter = new GroupAdapter();
+    private RecyclerView rvMessage;
+    private User userContact = new User();
+    private User eumesmo = new User();
 
 
-    private ListView lista;
-    private EditText sendMsg;
-//    private Button btnSendMsg;
-    private List<Message> listMsg = new ArrayList<>();
-    private Message message;
-    private MessageAdapter mAdpater;
-
-    /*View.OnClickListener send = new View.OnClickListener() {
+    View.OnClickListener send = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-            message = new Message();
-            message.setTexto(sendMsg.getText().toString());
-
-            // Atribuindo o valor do Id do usuário para testes de layout
-            message.setUserId("enviador");
-
-            mAdpater = new MessageAdapter(ChatActivity.this, listMsg);
-            listMsg.add(message);
-            lista.setAdapter(mAdpater);
-            sendMsg.setText("");
+            sendMessage();
         }
-    };*/
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+        userContact = (User) getIntent().getExtras().get("userContact");
+        getSupportActionBar().setTitle(userContact.getUsername());
 
-//        sendMsg = findViewById(R.id.edit_send_msg);
-//        lista = findViewById(R.id.list_chat);
-//        btnSendMsg = findViewById(R.id.btn_send_msg);
-//        btnSendMsg.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                sendMessage();
-//            }
-//        });
+        btnSendMsg = findViewById(R.id.btn_send_msg);
+        btnSendMsg.setOnClickListener(send);
+        editdMsg = findViewById(R.id.edit_send_msg);
+
+        rvMessage = findViewById(R.id.rv_message_chat);
+        rvMessage.setLayoutManager(new LinearLayoutManager(ChatActivity.this));
+        rvMessage.setAdapter(adapter);
+
+        /*
+        Escutando os eventos dos usuário aqui mesmo... pegamos a coleção de usuários e buscamos nosso usuário logado.
+        quando encontro o usuário eu chamo o método fetchMessage... para mostrar as msgs nos balões
+         */
+        collectionUsers.collection("/users")
+        .document(auth.getUid())
+        .get()
+        .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                eumesmo = documentSnapshot.toObject(User.class);
+                fetchMessage();
+            }
+
+        });
     }
+
+    public void fetchMessage() {
+        if(eumesmo != null){
+            String fromId = eumesmo.getUuid();
+            String toId = userContact.getUuid();
+
+            colletctionConversas.collection("/conversas")
+            .document(fromId)
+            .collection(toId)
+            .orderBy("timestamp", Query.Direction.ASCENDING)
+            .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
+                    List<DocumentChange> documentChanges = queryDocumentSnapshots.getDocumentChanges();
+                    if(documentChanges != null){
+                        for (DocumentChange doc : documentChanges ) {
+                            // getType me diz se o tipo do documento é ADDED, ou seja, objeto adicionado recente
+                            if( doc.getType() == DocumentChange.Type.ADDED){
+                                Message message = doc.getDocument().toObject(Message.class);
+                                adapter.add(new MessageItem(message));
+                            }
+
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    private class MessageItem extends Item<ViewHolder>{
+
+        private final Message message;
+
+        private MessageItem(Message message) {
+            this.message = message;
+        }
+
+        @Override
+        public void bind(@NonNull ViewHolder viewHolder, int position) {
+            TextView msg = viewHolder.itemView.findViewById(R.id.mensagem);
+            ImageView img = viewHolder.itemView.findViewById(R.id.imagemMsg);
+
+            msg.setText(message.getTexto());
+            Picasso.get().load(userContact.getProfileUrl()).into(img);
+        }
+
+        @Override
+        public int getLayout() {
+            return  message.getFromId().equals(auth.getUid()) ? R.layout.item_from_msg : R.layout.item_to_msg;
+        }
+    }
+
 
     // Criando o menu da ActionBar
     @Override
@@ -87,122 +153,62 @@ public class ChatActivity extends AppCompatActivity{
         inflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.voltar_contacts:
                 Intent i = new Intent(ChatActivity.this, ContactsActivity.class);
                 startActivity(i);
+                finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    // Método para procurar as mensagens na coleção
-    private void fetchMessage(){
-        if(me != null){
-            // Aqui eu defino quem é quem nas mensagens
-            String fromId = me.getUuid();
-            String toId = user.getUuid();
-
-            colletctionConversas.collection("/conversas")
-                .document(fromId)
-                .collection(toId)
-                // Ordenando conversas por período ascendente
-                .orderBy("timestamp", Query.Direction.ASCENDING)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
-                    //Crio uma lista para armazenar a coleção
-                    List<DocumentChange> documentChanges = queryDocumentSnapshots.getDocumentChanges();
-                    // Verifico se o documento está vazio e para cada modficação no registro eu armazeno o objeto atualizado
-                    if(documentChanges != null){
-                        for (DocumentChange doc : documentChanges ) {
-                            if(doc.getType() == DocumentChange.Type.ADDED){
-                                Message message = doc.getDocument().toObject(Message.class);
-                                // TODO - Adaptar uma lista para exibir os registros
-                                List<String> msg = new ArrayList<>();
-                                msg.add(message.getTexto());
-                                ArrayAdapter<String> adapter = new ArrayAdapter<String>(ChatActivity.this, R.layout.adpt_model_send_msg, msg);
-                                lista.setAdapter(adapter);
-
-                            }
-                        }
-                    }
-                    }
-                });
-        }
-    }
-
     // Aqui a mágica acontece...
     private void sendMessage(){
-        String texto = sendMsg.getText().toString();
+        String texto = editdMsg.getText().toString();
+        editdMsg.setText(null);
 
         final String fromId = auth.getUid();
-        final String toId = user.getUuid();
+        final String toId = userContact.getUuid();
         long timestamp = System.currentTimeMillis();
+
         //Corpo da mensagem
-        final Message messageFrom = new Message();
-        messageFrom.setFromId(fromId);
-        messageFrom.setToId(toId);
-        messageFrom.setTimestamp(timestamp);
-        messageFrom.setTexto(texto);
+        final Message message = new Message();
+        message.setFromId(fromId);
+        message.setToId(toId);
+        message.setTimestamp(timestamp);
+        message.setTexto(texto);
 
-        //Salvando as conversas na coleção do firestore
-        if(!messageFrom.getTexto().isEmpty()){
+        //Salvando as conversas na coleção do firestore enviando
+        if(!message.getTexto().isEmpty()){
             colletctionConversas.collection("/conversas")
-                    .document(fromId)
-                    .collection(toId)
-                    .add(messageFrom)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Log.d("Teste: ", documentReference.getId());
-
-                            //Crio um novo contato pra receber as mensagens
-                            Contacts contacts = new Contacts();
-                            contacts.setUuid(toId);
-                            contacts.setUsername(user.getUsername());
-//                            contacts.setPhotoUrl(me.getProfileUrl());
-                            contacts.setTimestamp(messageFrom.getTimestamp());
-                            contacts.setLastMessage(messageFrom.getTexto());
-                            colletctionConversas.collection("/last-message")
-                                    .document(fromId)
-                                    .collection("contacts")
-                                    .document(toId)
-                                    .set(contacts);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
+            .document(fromId)
+            .collection(toId)
+            .add(message)
+            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                 @Override
-                public void onFailure(@NonNull Exception e) {
-                    Log.e("Teste: ", e.getMessage(), e);
+                public void onSuccess(DocumentReference documentReference) {
+                    Log.d("Teste: ", documentReference.getId());
                 }
-            });
-
-            //Recebendo a mensagem do outro lado
-            colletctionConversas.collection("/conversas")
-                    .document(toId)
-                    .collection(fromId)
-                    .add(messageFrom)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Log.d("Teste: ", documentReference.getId());
-
-                            Contacts contacts = new Contacts();
-                            contacts.setUuid(fromId);
-                            contacts.setUsername(me.getUsername());
-//                            contacts.setPhotoUrl(user.getProfileUrl());
-                            contacts.setTimestamp(messageFrom.getTimestamp());
-                            contacts.setLastMessage(messageFrom.getTexto());
-                            colletctionConversas.collection("/last-message")
-                                    .document(toId)
-                                    .collection("contacts")
-                                    .document(fromId)
-                                    .set(contacts);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
+            }).addOnFailureListener(new OnFailureListener() {
+        @Override
+        public void onFailure(@NonNull Exception e) {
+            Log.e("Teste: ", e.getMessage(), e);
+        }});
+        //Salvando as conversas na coleção recebendo do outro lado
+             colletctionConversas.collection("/conversas")
+            .document(toId)
+            .collection(fromId)
+            .add(message)
+            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                @Override
+                public void onSuccess(DocumentReference documentReference) {
+                    Log.d("Teste: ", documentReference.getId());
+                }
+            })
+             .addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     Log.e("Erro: ", e.getMessage(), e);
@@ -211,6 +217,7 @@ public class ChatActivity extends AppCompatActivity{
         }
     }
 
-    //TODO - criar uma classe interna que possa controlar os atributos das mensagens
-    //TODO - falta acertar o envio e recebimento das mensagens
+    @Override
+    public void onBackPressed() {
+    }
 }

@@ -24,7 +24,10 @@
         <activity
             android:name=".ChatActivity"
             android:theme="@style/AppThemeContacts"
-            android:label="Chat" />
+            android:label="Chat" >
+
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

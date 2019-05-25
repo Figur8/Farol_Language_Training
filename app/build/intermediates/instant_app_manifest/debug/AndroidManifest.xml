@@ -42,7 +42,8 @@
         <activity
             android:name="com.slumdev.farol.ChatActivity"
             android:label="Chat"
-            android:theme="@style/AppThemeContacts" />
+            android:theme="@style/AppThemeContacts" >
+        </activity>
         <activity
             android:name="com.slumdev.farol.MainActivity"
             android:label="@string/app_name"

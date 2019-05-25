@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -30,17 +29,17 @@ public class MessageAdapter extends ArrayAdapter<Message> {
         TextView text = null;
         Message message = mensagens.get(position);
 
-        convertView = inflater.inflate(R.layout.adpt_model_reciver_msg,parent,false);
+        convertView = inflater.inflate(R.layout.item_from_msg,parent,false);
         text = convertView.findViewById(R.id.mensagem);
 
         // Testando qual usuário fez o login no app e modificando o layout de acordo
         /*if(message().equals("enviador")){
-            convertView = inflater.inflate(R.layout.adpt_model_send_msg,parent,false);
+            convertView = inflater.inflate(R.layout.item_to_msg,parent,false);
             text = convertView.findViewById(R.id.mensagem);
             text.setText(message.getTexto());
         }
         if(message.getTexto().isEmpty()){
-            convertView = inflater.inflate(R.layout.adpt_model_reciver_msg,parent,false);
+            convertView = inflater.inflate(R.layout.item_from_msg,parent,false);
             text = convertView.findViewById(R.id.mensagem);
             text.setText("Mensagem recebida");
         }*/

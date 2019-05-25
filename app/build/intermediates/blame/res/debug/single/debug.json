@@ -260,10 +260,6 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_adpt_model_reciver_msg.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\adpt_model_reciver_msg.xml"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
@@ -494,10 +490,6 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_adpt_model_send_msg.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\adpt_model_send_msg.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
@@ -936,6 +928,10 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
     },
     {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_from_msg.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\item_from_msg.xml"
+    },
+    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
@@ -1214,6 +1210,10 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_to_msg.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\item_to_msg.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",

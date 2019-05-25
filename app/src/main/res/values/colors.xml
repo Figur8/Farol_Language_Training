@@ -7,4 +7,6 @@
     <color name="ballon_send">#00316a</color>
     <color name="ballon_reciver">#5986ca</color>
     <color name="button_login">#1E5A99</color>
+
+    <color name="background">#e6ffff</color>
 </resources>
