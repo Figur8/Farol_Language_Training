@@ -6,6 +6,8 @@ public class Contacts {
     private String lastMessage;
     private long timestamp;
     private String photoUrl;
+    private String language;
+    private String optTeach;
 
     public Contacts() {
     }
@@ -49,5 +51,21 @@ public class Contacts {
 
     public void setPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getOptTeach() {
+        return optTeach;
+    }
+
+    public void setOptTeach(String optTeach) {
+        this.optTeach = optTeach;
     }
 }

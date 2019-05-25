@@ -1,7 +1,11 @@
 package com.slumdev.farol;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -29,5 +33,28 @@ public class FeedBackActivity extends AppCompatActivity {
         cores.setAdapter(adapter);
         numeros.setAdapter(adapter);
         horas.setAdapter(adapter);
+    }
+
+    // Criando o menu da ActionBar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.voltar:
+                Intent i = new Intent(FeedBackActivity.this, ContactsActivity.class);
+                startActivity(i);
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 }

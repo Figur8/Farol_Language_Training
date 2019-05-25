@@ -1,10 +1,12 @@
 <resources>
     <!--- Strings dos spinners -->
+    <!--- Language -->
     <string-array name="Langauges">
         <item>Português</item>
         <item>English</item>
         <item>Spanish</item>
     </string-array>
+    <!--< Feedback -->
     <string-array name="Notas">
         <item>0</item>
         <item>1</item>
@@ -14,22 +16,25 @@
         <item>5</item>
     </string-array>
 
-
     <string name="app_name">Farol</string>
     <string name="navigation_drawer_open">Abrir Navigation Drawer</string>
     <string name="navigation_drawer_close">Fechar Navigation Drawer</string>
     <string name="nav_header_title">Farol</string>
-    <string name="nav_header_subtitle">A luz para seu estudo</string>
+    <string name="nav_header_subtitle">Bem Vindo!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_logout">Logout</string>
 
+    <!-- String do menu navigationDrawer -->
     <string name="menu_dash">Dashboard</string>
     <string name="menu_logout">Logout</string>
     <string name="menu_chat">Chat</string>
     <string name="text_talk">TALK</string>
 
+    <!-- Botões -->
     <string name="button_send_msg">Enviar</string>
-    <string name="text_feedback_title">Qualify the skills of this partner!</string>
+
+    <!-- Menus -->
+    <string name="text_feedback_title">Qualifique seu parceiro de estudo!</string>
     <string name="text_button_feedback">FeedBack</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -47,4 +52,9 @@
     <string name="text_return_contacts">voltar</string>
     <string name="text_activity_contacts">Contatos</string>
     <string name="nav_text_name_user">usuario</string>
+    <string name="text_image_profile_select">Selecione Imagem</string>
+    <string name="text_slogan">A luz pro seu estudo!</string>
+    <string name="text_email_login">Email</string>
+    <string name="text_password_login">Senha</string>
+    <string name="text_language_contact">idoma</string>
 </resources>

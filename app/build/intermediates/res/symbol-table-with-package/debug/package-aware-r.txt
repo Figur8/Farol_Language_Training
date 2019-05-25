@@ -1033,7 +1033,10 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_arrow_back_white_24dp
 drawable baseline_contacts_black_24dp
+drawable baseline_feedback_black_24dp
+drawable baseline_feedback_white_24dp
 drawable baseline_keyboard_arrow_left_black_24dp
 drawable baseline_power_settings_new_black_18dp
 drawable botao_foto
@@ -1067,9 +1070,13 @@ drawable efeitos_imagebutton
 drawable efeitos_loginbutton
 drawable farol
 drawable farol2
+drawable farol3
+drawable farol4
 drawable fundo_botao
+drawable fundo_edit_text
 drawable fundo_reciver_msg
 drawable fundo_send_msg
+drawable fundochatcont
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_chat_24px
@@ -1111,6 +1118,7 @@ drawable talk
 drawable talk2
 drawable talk_pressed
 drawable talk_pressed2
+drawable texturafundo
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1197,6 +1205,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id feedback
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1329,10 +1338,13 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
+id textLogin
+id textPassword
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
+id textView2
 id text_input_password_toggle
 id text_login_logo
 id text_register
@@ -1367,7 +1379,7 @@ id user_password
 id view_offset_helper
 id visible
 id volta
-id voltar_contacts
+id voltar
 id voltar_main
 id wide
 id withText
@@ -1577,7 +1589,10 @@ string search_menu_title
 string status_bar_notification_info_overflow
 string text_activity_contacts
 string text_button_feedback
+string text_email_login
 string text_feedback_title
+string text_image_profile_select
+string text_password_login
 string text_register_button
 string text_register_email
 string text_register_password
@@ -1585,6 +1600,7 @@ string text_register_username
 string text_return_chat
 string text_return_contacts
 string text_select_image_register
+string text_slogan
 string text_talk
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

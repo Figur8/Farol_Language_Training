@@ -52,6 +52,7 @@ public class ChatActivity extends AppCompatActivity{
     private RecyclerView rvMessage;
     private User userContact = new User();
     private User eumesmo = new User();
+    private LinearLayoutManager lchat = new LinearLayoutManager(ChatActivity.this);
 
 
     View.OnClickListener send = new View.OnClickListener() {
@@ -74,8 +75,13 @@ public class ChatActivity extends AppCompatActivity{
         editdMsg = findViewById(R.id.edit_send_msg);
 
         rvMessage = findViewById(R.id.rv_message_chat);
-        rvMessage.setLayoutManager(new LinearLayoutManager(ChatActivity.this));
+        lchat.setReverseLayout(true);
+        lchat.setStackFromEnd(true);
+        rvMessage.setHasFixedSize(true);
+        rvMessage.setLayoutManager(lchat);
         rvMessage.setAdapter(adapter);
+        rvMessage.scrollToPosition(adapter.getItemCount());
+
 
         /*
         Escutando os eventos dos usuário aqui mesmo... pegamos a coleção de usuários e buscamos nosso usuário logado.
@@ -113,8 +119,8 @@ public class ChatActivity extends AppCompatActivity{
                             if( doc.getType() == DocumentChange.Type.ADDED){
                                 Message message = doc.getDocument().toObject(Message.class);
                                 adapter.add(new MessageItem(message));
+                                Log.d("Contagem: ", String.valueOf(adapter.getItemCount()));
                             }
-
                         }
                     }
                 }
@@ -150,13 +156,13 @@ public class ChatActivity extends AppCompatActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.menu_chat, menu);
         return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.voltar_contacts:
+            case R.id.volta:
                 Intent i = new Intent(ChatActivity.this, ContactsActivity.class);
                 startActivity(i);
                 finish();

@@ -98,9 +98,11 @@ public class ContactsActivity extends AppCompatActivity {
         @Override
         public void bind(@NonNull ViewHolder viewHolder, int position) {
             TextView nomecontato = viewHolder.itemView.findViewById(R.id.nameContact);
+            TextView idioma = viewHolder.itemView.findViewById(R.id.text_language);
             ImageView imagemcontato = viewHolder.itemView.findViewById(R.id.imageContact);
 
             nomecontato.setText(user.getUsername());
+            idioma.setText(user.getLanguage());
             Picasso.get().load(user.getProfileUrl()).into(imagemcontato);
         }
         // serve para modificar os layouts da lista
@@ -114,13 +116,13 @@ public class ContactsActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_contacts, menu);
+        inflater.inflate(R.menu.menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.voltar_main:
+            case R.id.voltar:
                 Intent i = new Intent(ContactsActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();

@@ -12,9 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -41,16 +44,19 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseStorage storage = FirebaseStorage.getInstance();
     private FirebaseFirestore collectionUsers = FirebaseFirestore.getInstance();
     private StorageReference imageUri;
-    private EditText editEmail;
-    private EditText editPassword;
-    private EditText editUsername;
-    private Button saveUser;
 
-    //Variáveis para inserção de imagem do perfil
+    //Variáveis para registro do usuário
+    private String optTeachR;
     private Button selectPhoto;
     private ImageView imageProfile;
     private Uri uriImage;
     private Bitmap bitmap;
+    private EditText editEmail;
+    private EditText editPassword;
+    private EditText editUsername;
+    private Button saveUser;
+    private Spinner languageR;
+    private Switch teach;
 
 
     //Evento para selecionar imagem do dispositivo
@@ -74,6 +80,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+
+        teach = findViewById(R.id.option_teach_register);
+        if(teach.isChecked()){
+            optTeachR = "É Professor";
+        }else{
+            optTeachR = "É Aluno";
+        }
+
+
+        languageR = findViewById(R.id.option_language_register);
+
+        // Este item é como se fosse um selectItem do html, precisamos instancialo como um listView
+        languageR = findViewById(R.id.option_language_register);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(RegisterActivity.this,
+                R.array.Langauges, android.R.layout.simple_spinner_dropdown_item);
+        languageR.setAdapter(adapter);
 
         // Passamos os dados do usuário para persisntência em banco
         editUsername = findViewById(R.id.userName);
@@ -142,10 +164,14 @@ public class RegisterActivity extends AppCompatActivity {
                                 String uid = auth.getUid();
                                 String username = editUsername.getText().toString();
                                 String profileUrl = uri.toString();
+                                String language = String.valueOf(languageR.getSelectedItemId());
+                                String optTeach = optTeachR;
                                 final User user = new User();
                                 user.setUuid(uid);
                                 user.setUsername(username);
                                 user.setProfileUrl(profileUrl);
+                                user.setLanguage(language);
+                                user.setOptTeach(optTeach);
                                 collectionUsers.collection("users")
                                     /* para gerar um identificador fixo... passamos um document com o uid e depois set no usuário  */
                                     .document(uid)

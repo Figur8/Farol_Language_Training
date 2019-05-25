@@ -1,62 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:gravity="center"
+    android:layout_margin="0dp"
+    android:fillViewport="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="230dp"
-        android:layout_height="203dp"
-        android:src="@drawable/farol" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@drawable/texturafundo"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/text_login_logo"
-        android:text="A luz pro seu estudo."
-        android:textStyle="italic"
-        android:textSize="15dp"
-        android:layout_marginBottom="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="250dp"
+            android:layout_height="223dp"
+            android:src="@drawable/farol4" />
 
-    <EditText
-        android:id="@+id/user_login"
-        android:layout_margin="10dp"
-        android:hint="login..."
-        android:textAlignment="center"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/text_login_logo"
+            android:text="@string/text_slogan"
+            android:textStyle="italic|bold"
+            android:textSize="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/user_password"
-        android:hint="password..."
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:layout_margin="10dp"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textLogin"
+            android:text="@string/text_email_login"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/user_login"
+            android:textSize="18dp"
+            android:background="@drawable/fundo_edit_text"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:layout_width="250dp"
+            android:layout_height="40dp" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:text="Login"
-        android:textSize="15dp"
-        android:background="@drawable/efeitos_loginbutton"
-        android:textColor="@android:color/white"
-        android:layout_margin="10dp"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/text_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:cursorVisible="true"
-        android:text="Não tem conta? Clique Aqui!"
-        android:textSize="10dp" />
+        <TextView
+            android:id="@+id/textPassword"
+            android:text="@string/text_password_login"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/user_password"
+            android:textSize="18dp"
+            android:inputType="textPassword"
+            android:background="@drawable/fundo_edit_text"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_login"
+            android:text="Login"
+            android:textSize="15dp"
+            android:background="@drawable/efeitos_loginbutton"
+            android:textColor="@android:color/white"
+            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:cursorVisible="true"
+            android:text="Não tem conta? Clique Aqui!"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:orientation="vertical"-->
+    <!--android:background="@drawable/texturafundo"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".LoginActivity">-->
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:id="@+id/imgLogo"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="223dp"-->
+            <!--android:src="@drawable/farol4" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_login_logo"-->
+            <!--android:text="@string/text_slogan"-->
+            <!--android:textStyle="italic|bold"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textLogin"-->
+            <!--android:text="@string/text_email_login"-->
+            <!--android:textSize="18dp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/user_login"-->
+            <!--android:textSize="18dp"-->
+            <!--android:background="@drawable/fundo_edit_text"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="40dp" />-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/textPassword"-->
+            <!--android:text="@string/text_password_login"-->
+            <!--android:textSize="18dp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/user_password"-->
+            <!--android:textSize="18dp"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:background="@drawable/fundo_edit_text"-->
+            <!--android:textAlignment="center"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="40dp" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_login"-->
+            <!--android:text="Login"-->
+            <!--android:textSize="15dp"-->
+            <!--android:background="@drawable/efeitos_loginbutton"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_register"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:cursorVisible="true"-->
+            <!--android:text="Não tem conta? Clique Aqui!"-->
+            <!--android:textSize="12dp" />-->
+
+
+
+<!--</LinearLayout>-->

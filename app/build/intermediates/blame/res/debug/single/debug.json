@@ -1,19 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable\\common_google_signin_btn_icon_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\color\\common_google_signin_btn_tint.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_dark.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
@@ -92,20 +92,20 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_bottom_navigation_item_background.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\drawable\\design_bottom_navigation_item_background.xml"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_btn_ripple_color.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_bottom_navigation_item_background.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\drawable\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_tab_icon.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_btn_ripple_color.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_internal_bg.xml.flat",
@@ -128,12 +128,12 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_colored_ripple_color.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_colored_ripple_color.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_tabs_colored_ripple_color.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-watch-v20_abc_dialog_material_background.xml.flat",
@@ -152,12 +152,12 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\toolbar.xml"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\toolbar.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -168,28 +168,28 @@
         "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-ldrtl-xxxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_ripple_color.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_tabs_ripple_color.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\drawable-xxxhdpi-v4\\design_ic_visibility.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_mtrl_linear_out_slow_in.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\interpolator\\mtrl_linear_out_slow_in.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_ripple_color.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_tabs_ripple_color.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xhdpi-v4\\common_full_open_on_phone.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_dashboard_24px.png.flat",
@@ -232,24 +232,24 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\color\\mtrl_bottom_nav_colored_item_tint.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_tab_indicator_material.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_radio_material.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_btn_radio_material.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
@@ -268,20 +268,20 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_slow_in.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\interpolator-v21\\mtrl_fast_out_slow_in.xml"
-    },
-    {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fundo_reciver_msg.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\fundo_reciver_msg.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_baseline_power_settings_new_black_18dp.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable-v21\\baseline_power_settings_new_black_18dp.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_baseline_power_settings_new_black_18dp.png.flat",
-        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable-v21\\baseline_power_settings_new_black_18dp.png"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fundo_reciver_msg.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\fundo_reciver_msg.xml"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_fast_out_slow_in.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\interpolator-v21\\mtrl_fast_out_slow_in.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
@@ -304,20 +304,20 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\019124cb8dec9f3c18ed06ec0535d07c\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\b1950f43de6867d0aca4fdfee09e2d0e\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_default_mtrl_shape.xml.flat",
-        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\019124cb8dec9f3c18ed06ec0535d07c\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_default_mtrl_shape.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -460,6 +460,10 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\6b046a6df7f8f843beca912d4f4053ce\\res\\drawable-xhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fundochatcont.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\fundochatcont.png"
+    },
+    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -474,6 +478,10 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fundo_edit_text.xml.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\fundo_edit_text.xml"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -612,6 +620,10 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_feedback_black_24dp.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\baseline_feedback_black_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\3dec68a7bfea6d55c9fb326c15f6b35c\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
     },
@@ -746,6 +758,10 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_arrow_back_white_24dp.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\baseline_arrow_back_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
@@ -1374,6 +1390,10 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_baseline_feedback_white_24dp.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\baseline_feedback_white_24dp.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
@@ -2040,6 +2060,10 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_farol4.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\farol4.png"
+    },
+    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -2268,6 +2292,10 @@
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_texturafundo.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\texturafundo.png"
+    },
+    {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_colored_material.xml.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable\\abc_btn_colored_material.xml"
     },
@@ -2298,6 +2326,10 @@
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\TiagoAragao\\.gradle\\caches\\transforms-2\\files-2.1\\f35ff75d217627ac0c6ce44e4fe6a620\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable_farol3.png.flat",
+        "source": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\src\\main\\res\\drawable\\farol3.png"
     },
     {
         "merged": "C:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",

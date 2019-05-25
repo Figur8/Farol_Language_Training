@@ -1,4 +1,4 @@
-#Sat May 25 00:01:43 GMT-03:00 2019
+#Sat May 25 13:11:10 GMT-03:00 2019
 base.0=C\:\\Users\\TiagoAragao\\Desktop\\Projetos Faculdade\\PI4_Farol\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
 path.0=classes.dex
 renamed.0=classes.dex
