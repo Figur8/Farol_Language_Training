@@ -46,7 +46,6 @@ public class RegisterActivity extends AppCompatActivity {
     private StorageReference imageUri;
 
     //Variáveis para registro do usuário
-    private String optTeachR;
     private Button selectPhoto;
     private ImageView imageProfile;
     private Uri uriImage;
@@ -55,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText editPassword;
     private EditText editUsername;
     private Button saveUser;
-    private Spinner languageR;
+    private Spinner Nativelanguage;
     private Switch teach;
 
 
@@ -81,21 +80,22 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-        teach = findViewById(R.id.option_teach_register);
-        if(teach.isChecked()){
-            optTeachR = "É Professor";
-        }else{
-            optTeachR = "É Aluno";
-        }
+//        teach = findViewById(R.id.option_teach_register);
+//        if(teach.isChecked() == true){
+//            optTeachR = "Professor";
+//        }else{
+//            optTeachR = "Aluno";
+//        }
 
 
-        languageR = findViewById(R.id.option_language_register);
+        Nativelanguage = findViewById(R.id.option_language_register);
 
         // Este item é como se fosse um selectItem do html, precisamos instancialo como um listView
-        languageR = findViewById(R.id.option_language_register);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(RegisterActivity.this,
-                R.array.Langauges, android.R.layout.simple_spinner_dropdown_item);
-        languageR.setAdapter(adapter);
+        Nativelanguage = findViewById(R.id.option_language_register);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(RegisterActivity.this,
+                R.array.Langauges, R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_drop_down);
+        Nativelanguage.setAdapter(adapter);
 
         // Passamos os dados do usuário para persisntência em banco
         editUsername = findViewById(R.id.userName);
@@ -164,14 +164,14 @@ public class RegisterActivity extends AppCompatActivity {
                                 String uid = auth.getUid();
                                 String username = editUsername.getText().toString();
                                 String profileUrl = uri.toString();
-                                String language = String.valueOf(languageR.getSelectedItemId());
-                                String optTeach = optTeachR;
+                                String language = Nativelanguage.getSelectedItem().toString();
+//                                String optTeach = optTeachR;
                                 final User user = new User();
                                 user.setUuid(uid);
                                 user.setUsername(username);
                                 user.setProfileUrl(profileUrl);
                                 user.setLanguage(language);
-                                user.setOptTeach(optTeach);
+//                                user.setOptTeach(optTeach);
                                 collectionUsers.collection("users")
                                     /* para gerar um identificador fixo... passamos um document com o uid e depois set no usuário  */
                                     .document(uid)
@@ -179,7 +179,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Log.d("Usuário: ", user.getUuid());
+                                        Log.d("Usuário: ", user.getUuid()+" "+ user.getLanguage());
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         // CLEAR_TASK, NEW_TASK, faz com que essa activity seja a principal.
                                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

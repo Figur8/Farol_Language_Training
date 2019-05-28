@@ -10,8 +10,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageContact"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -23,24 +23,39 @@
     <TextView
         android:id="@+id/nameContact"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:padding="5dp"
         android:text="Nome do Contato"
+        android:textAlignment="center"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageContact"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_language"
-        android:textStyle="italic"
-        android:textSize="14dp"
+        android:id="@+id/text_teach_or_no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/text_language"
+        app:layout_constraintStart_toEndOf="@+id/nameContact"
+        app:layout_constraintTop_toTopOf="@+id/nameContact" />
+
+    <TextView
+        android:id="@+id/text_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
         android:text="@string/text_language_contact"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/nameContact"
         app:layout_constraintStart_toStartOf="@+id/nameContact"
         app:layout_constraintTop_toBottomOf="@+id/nameContact" />

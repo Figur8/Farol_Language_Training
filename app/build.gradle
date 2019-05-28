@@ -49,8 +49,10 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
 
     /* deixar a imagem do perfil redonda */
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
 
+//    /* Notificações push */
+//    implementation 'com.google.firebase:firebase-messaging:17.6.0'
 
     // Criação da lista de usuários
     implementation 'com.google.firebase:firebase-firestore:19.0.0'

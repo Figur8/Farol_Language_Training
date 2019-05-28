@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="0dp"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +15,7 @@
     android:background="@drawable/texturafundo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context="com.slumdev.farol.RegisterActivity"  >
 
     <LinearLayout
         android:layout_marginTop="50dp"
@@ -110,22 +118,12 @@
             android:layout_height="40dp" />
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Switch
-                android:id="@+id/option_teach_register"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:text="Teach:" />
-
             <TextView
-                android:text="Idioma"
+                android:text="Idioma Nativo"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:layout_marginStart="20dp"
@@ -159,3 +157,4 @@
 
 
 </LinearLayout>
+</ScrollView>

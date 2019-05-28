@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/fundochatcont"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    tools:context=".FeedBackActivity">
+    tools:context="com.slumdev.farol.FeedBackActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_feedback"
-        app:title="FeedBack"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:titleTextColor="@android:color/white"
-        android:background="@color/colorPrimaryDark"
-        app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <LinearLayout
         android:id="@+id/layout_fb"
@@ -50,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Pronuncy"
+                android:text="Pronuncia"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -76,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Grammar"
+                android:text="Gramática"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -101,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Expressions"
+                android:text="Expressões"
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
@@ -125,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Colors"
+                android:text="Cores"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -150,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Numbers"
+                android:text="Números"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -175,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:text="Hours"
+                android:text="Horas"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:textStyle="bold"

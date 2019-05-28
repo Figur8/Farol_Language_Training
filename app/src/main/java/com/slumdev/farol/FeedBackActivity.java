@@ -12,6 +12,7 @@ import android.widget.Spinner;
 public class FeedBackActivity extends AppCompatActivity {
 
     private Spinner pronuncia, gramatica, expressao, cores, numeros, horas ;
+    private String language;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,9 @@ public class FeedBackActivity extends AppCompatActivity {
         numeros = findViewById(R.id.spinner_numbers);
         horas = findViewById(R.id.spinner_hours);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(FeedBackActivity.this,
-                R.array.Notas, android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(FeedBackActivity.this,
+                R.array.Notas, R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_drop_down);
         pronuncia.setAdapter(adapter);
         gramatica.setAdapter(adapter);
         expressao.setAdapter(adapter);
@@ -46,7 +48,7 @@ public class FeedBackActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.voltar:
-                Intent i = new Intent(FeedBackActivity.this, ContactsActivity.class);
+                Intent i = new Intent(FeedBackActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
                 return true;

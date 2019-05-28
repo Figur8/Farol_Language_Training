@@ -9,6 +9,7 @@
         <TextView
             android:id="@+id/mensagem"
             android:textColor="@android:color/white"
+            android:textSize="18dp"
             android:padding="5dp"
             android:maxWidth="240dp"
             android:background="@drawable/fundo_send_msg"

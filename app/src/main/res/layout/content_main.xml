@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/text_talk"
+            android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -42,29 +43,47 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:attr/listDivider" />
-        <Spinner
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:id="@+id/option_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-        </Spinner>
-
-        <View
-            android:id="@+id/div2"
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
-
-        <Switch
-            android:id="@+id/option_teach"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Teach:" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="@string/select_language"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:id="@+id/option_language"
+                android:layout_marginStart="8dp"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <!--<TextView-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_marginStart="20dp"-->
+                <!--android:text="@string/text_teacher_"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <!--<Switch-->
+                <!--android:id="@+id/option_teach"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="start"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:text="Teach:" />-->
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

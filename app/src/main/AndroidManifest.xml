@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.slumdev.farol">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -8,14 +11,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ContactsActivity"
             android:theme="@style/AppThemeContacts"
             android:label="Contatos">
 
         </activity>
+
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".FeedBackActivity" />
+        <activity android:name=".FeedBackActivity"
+            android:label="Feedback"
+            android:theme="@style/AppThemeContacts"
+            android:screenOrientation="portrait">
+
+        </activity>
+
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
@@ -26,8 +37,9 @@
             android:theme="@style/AppThemeContacts"
             android:label="Chat" >
 
-
         </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -39,6 +51,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
