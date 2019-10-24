@@ -1,5 +1,7 @@
 {
   "name": "Farol",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

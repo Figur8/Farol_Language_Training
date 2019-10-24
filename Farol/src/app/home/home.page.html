@@ -1,44 +1,97 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
     <ion-title>
-      Home
+      Ionic 4 Firestore CRUD Operation Demo
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+ 
+<ion-content padding>
+ 
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-input placeholder="Enter Name" [(ngModel)]="studentName"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input placeholder="Enter Age" [(ngModel)]="studentAge"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <ion-input placeholder="Enter Address" [(ngModel)]="studentAddress"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <ion-button (click)="CreateRecord()" [disabled]="!studentName || !studentAge || !studentAddress">
+          <ion-icon size="small" slot="icon-only" name="add"></ion-icon>
+          &nbsp;Create Record
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+ 
+  <ion-card *ngFor="let item of students">
+    <span *ngIf="!item.isEdit; else elseBlock">
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-title>{{item.Name}} of {{item.Age}} years</ion-card-title>
+        <ion-card-subtitle>From: {{item.Address}}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+ 
+        <ion-button shape="round" color="secondary" size="small" (click)="EditRecord(item)">
+          <ion-icon size="small" slot="icon-only" name="create"></ion-icon>
+ 
+        </ion-button>
+        <ion-button shape="round" color="danger" size="small" (click)="RemoveRecord(item.id)">
+          <ion-icon size="small" slot="icon-only" name="trash"></ion-icon>
+ 
+        </ion-button>
       </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+    </span>
+    <ng-template #elseBlock>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                Edit
+              </ion-col>
+              <ion-col>
+                <ion-button fill="clear" color="medium" size="small" (click)="item.isEdit = false">
+                  Cancel
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="outline" color="success" size="small" (click)="UpdateRecord(item)">
+                  Update
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label><strong>Name</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Age</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditAge"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label><strong>Address</strong></ion-label>
+          <ion-input type="text" [(ngModel)]="item.EditAddress"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ng-template>
+  </ion-card>
+ 
 </ion-content>
