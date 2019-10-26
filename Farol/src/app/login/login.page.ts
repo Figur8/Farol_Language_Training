@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +8,9 @@ import { NavController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public menu: MenuController) { 
+    this.menu.enable(false);
+  }
 
   logar(){
     let user = (<HTMLSelectElement>document.querySelector('#user'))

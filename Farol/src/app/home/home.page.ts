@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
- 
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
+import { MenuController } from '@ionic/angular';
 //  https://www.freakyjolly.com/ionic-4-crud-operations-using-firebase-and-firestore-database-tutorial-in-ionic-4-with-angular-7/
 @Component({
   selector: 'app-home',
@@ -14,7 +14,9 @@ export class HomePage implements OnInit {
   studentAge: number;
   studentAddress: string;
  
-  constructor(private crudService: FirebaseConnectionService) { }
+  constructor(private crudService: FirebaseConnectionService, private menu: MenuController) { 
+    this.menu.enable(true);
+  }
  
   ngOnInit() {
     this.crudService.read_Students().subscribe(data => {
