@@ -1,0 +1,60 @@
+ion-title{
+    font-size: 20px;
+    text-align: center;
+}
+.ion-padding{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+.logo{
+    text-align: center;
+    font-size: 12px;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-top: 40px;
+
+    img{
+        margin-bottom: 5px;
+    }  
+}  
+.slogan{
+    margin-top: 20px;
+    ion-label{
+        font-size: 12px;  
+        font-style: italic;
+    }
+}
+.login{
+    margin-top: 30px;    
+    text-align: center;
+    ion-input{
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        text-align: center;
+        width: 50%;
+        border: 1px solid black;                
+    }
+}
+.botao{
+    text-align: center;
+    margin-top: 10px;
+    ion-button{    
+        border-radius: 10px;
+        width: 50%;        
+    }
+    ion-button:hover{
+        background-color: gray;
+    }
+}
+    
+
+.criarconta{
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
