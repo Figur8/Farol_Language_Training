@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseConnectionService } from '../services/firebase-connection.service';
 import { MenuController } from '@ionic/angular';
-//  https://www.freakyjolly.com/ionic-4-crud-operations-using-firebase-and-firestore-database-tutorial-in-ionic-4-with-angular-7/
+import { FirebaseConnectionService } from '../services/firebase-connection.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -31,7 +30,6 @@ export class HomePage implements OnInit {
         };
       })
       console.log(this.students);
- 
     });
   }
  
