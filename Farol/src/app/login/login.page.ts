@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     .then(res => {
       console.log(res);
       this.errorMessage = "";
-      this.navCtrl.navigateForward('/home');
+      this.navCtrl.navigateRoot('/home');
       this.firebaseService.userDetails();
     }, err => {
       this.errorMessage = err.message;
@@ -30,5 +30,4 @@ export class LoginPage implements OnInit {
   }
   ngOnInit() {
   }
-
 }

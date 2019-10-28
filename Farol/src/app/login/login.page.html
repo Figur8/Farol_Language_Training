@@ -1,20 +1,22 @@
 <ion-content>
-  <div class="ion-padding">
-      <div class="logo">
-          <ion-img src="assets/farol5.png"></ion-img>      
-          <div class="slogan">
-              <ion-label>A luz para seu estudo!</ion-label>
-          </div>          
-      </div>  
-      <div class="login">  
-        Usuário<ion-input name="user" [(ngModel)]="user" type="text" id="user"></ion-input>
-        Senha<ion-input name="password" [(ngModel)]="password" type="text" id="pass"></ion-input>    
-      </div>
-      <div class="botao">
-        <ion-button (click)="loginUser()">Logar</ion-button>
-      </div>
-      <div class="criarconta">
-          <ion-label>Não tem conta?<span><a href="/register">Clique Aqui!</a></span></ion-label>
-      </div>
-  </div>  
+    <div class="ion-padding">
+        <div class="logo">
+            <ion-img src="assets/farol5.png"></ion-img>
+            <div class="slogan">
+                <ion-label>A luz para seu estudo!</ion-label>
+            </div>
+        </div>
+        <div class="login">
+            Usuário
+            <ion-input name="user" [(ngModel)]="user" type="text" id="user"></ion-input>
+            Senha
+            <ion-input name="password" [(ngModel)]="password" type="password" id="pass"></ion-input>
+        </div>
+        <div class="botao">
+            <ion-button (click)="loginUser()">Logar</ion-button>
+        </div>
+        <div class="criarconta">
+            <ion-label>Não tem conta?<span><a href="/register">Clique Aqui!</a></span></ion-label>
+        </div>
+    </div>
 </ion-content>
