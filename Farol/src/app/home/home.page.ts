@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController, NavController } from '@ionic/angular';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -13,9 +14,14 @@ export class HomePage implements OnInit {
   studentAge: number;
   studentAddress: string;
  
-  constructor(private navCtrl: NavController, private crudService: FirebaseConnectionService, private menu: MenuController) { 
+  constructor(
+    private navCtrl: NavController, 
+    private crudService: FirebaseConnectionService, 
+    private menu: MenuController,
+    private fbAuth: AngularFireAuth) { 
     this.menu.enable(true);
-  }
+
+    }
  
   ngOnInit() {
     this.crudService.read_Students().subscribe(data => {
@@ -29,7 +35,7 @@ export class HomePage implements OnInit {
           // Age: e.payload.doc.data()['Age'],
           // Address: e.payload.doc.data()['Address'],          
         };
-      })
+      })      
       console.log(this.students)
       
     });

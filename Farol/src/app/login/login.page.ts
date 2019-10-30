@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, MenuController } from '@ionic/angular';
-import { FirebaseAuth } from '@angular/fire';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 // import { FirebaseConnectionService } from '../services/firebase-connection.service';
 
 @Component({
@@ -14,10 +14,22 @@ export class LoginPage implements OnInit {
   private user: string;
   private password: string;
 
-  constructor(public navCtrl: NavController, public menu: MenuController, public firebase: FirebaseConnectionService) { 
-    this.menu.enable(false);
+  constructor(
+    public navCtrl: NavController, 
+    public menu: MenuController, 
+    public firebase: FirebaseConnectionService,
+    public fbAuth: AngularFireAuth) { 
+    this.menu.enable(false);        
+    
+    this.fbAuth.auth.onAuthStateChanged((user) => {
+      if(user){
+        navCtrl.navigateRoot('/home')        
+      }else{
+        alert('usuário não logado')
+      }
+    })        
   }
-
+  
   loginUser(){   
     this.firebase.loginUser(this.user, this.password)    
     .then(res => {
