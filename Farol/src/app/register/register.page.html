@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 text-center>Dados do Usuário</h2>
+  <div class="datas">
+      <ion-input placeholder="Nome"></ion-input>
+      <ion-input placeholder="E-mail"></ion-input>
+      <ion-input placeholder="Senha"></ion-input>
+  </div> 
+  <div class="botoes">
+      <ion-button fill="outline" (click)="register()">Cadastrar</ion-button>
+      <ion-button fill="outline" [routerLink]="['/login']">Voltar</ion-button>
+  </div>   
+</ion-content>

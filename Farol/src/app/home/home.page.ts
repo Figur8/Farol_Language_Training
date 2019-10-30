@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomePage implements OnInit {
   studentAge: number;
   studentAddress: string;
  
-  constructor(private crudService: FirebaseConnectionService, private menu: MenuController) { 
+  constructor(private navCtrl: NavController, private crudService: FirebaseConnectionService, private menu: MenuController) { 
     this.menu.enable(true);
   }
  
@@ -24,14 +24,20 @@ export class HomePage implements OnInit {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          Name: e.payload.doc.data()['Name'],
-          Age: e.payload.doc.data()['Age'],
-          Address: e.payload.doc.data()['Address'],
+          username: e.payload.doc.data()['username'],
+          language: e.payload.doc.data()['language']
+          // Age: e.payload.doc.data()['Age'],
+          // Address: e.payload.doc.data()['Address'],          
         };
       })
-      console.log(this.students);
+      console.log(this.students)
+      
     });
   }
  
+  logout(){
+    this.crudService.logoutUser()
+    this.navCtrl.navigateRoot('/login')
+  }
  
 }
