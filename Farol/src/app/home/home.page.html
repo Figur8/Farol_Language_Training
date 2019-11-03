@@ -1,33 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Usuário Logado {{ item.username }} Ionic 4 Firestore CRUD Operation Demo
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            <!-- Usuário Logado {{ item.username }} Ionic 4 Firestore CRUD Operation Demo -->
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
- 
+
 <ion-content padding>
- <div class="usuario"> 
-   <ion-grid>
-     <ion-row>
-       <ion-col>Nome</ion-col>
-       <ion-col>Idioma Nativo</ion-col>
-     </ion-row>     
-     <ion-row *ngFor="let item of students">
-        <ion-col>
-          {{ item.username }}
-        </ion-col>                                  
-        <ion-col>
-            {{ item.language }}
-        </ion-col>             
-     </ion-row>
-   </ion-grid>     
- </div>
-  <!-- <ion-card *ngFor="let item of students">
+    <div class="usuario">
+        <ion-grid>
+            <ion-row>
+                <ion-col>Nome</ion-col>
+                <ion-col>Idioma Nativo</ion-col>
+            </ion-row>
+            <ion-row *ngFor="let item of students">
+                <ion-col>
+                    <!-- {{ item.username }} -->
+                </ion-col>
+                <ion-col>
+                    <!-- {{ item.language }} -->
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <!-- <ion-card *ngFor="let item of students">
       <ion-card-header>
         <ion-card-title>{{ item.username }}<span> - Idioma </span> {{ item.language }}</ion-card-title>
       </ion-card-header>
   </ion-card> -->
-  <ion-button (click)="logout()" fill="outline">Sair</ion-button>
- 
+    <ion-button (click)="logout()" fill="outline">Sair</ion-button>
+
 </ion-content>
