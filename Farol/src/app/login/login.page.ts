@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, MenuController } from '@ionic/angular';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+// import { FirebaseConnectionService } from '../services/firebase-connection.service';
 
 @Component({
   selector: 'app-login',
@@ -12,23 +14,35 @@ export class LoginPage implements OnInit {
   private user: string;
   private password: string;
 
-  constructor(public navCtrl: NavController, public menu: MenuController, public firebaseService: FirebaseConnectionService) { 
-    this.menu.enable(false);
+  constructor(
+    public navCtrl: NavController, 
+    public menu: MenuController, 
+    public firebase: FirebaseConnectionService,
+    public fbAuth: AngularFireAuth) { 
+    this.menu.enable(false);        
+    
+    this.fbAuth.auth.onAuthStateChanged((user) => {
+      if(user){
+        navCtrl.navigateRoot('/home')        
+      }else{
+        alert('usuário não logado')
+      }
+    })        
   }
-
-  loginUser(){
-    this.firebaseService.loginUser(this.user, this.password)
+  
+  loginUser(){   
+    this.firebase.loginUser(this.user, this.password)    
     .then(res => {
       console.log(res);
       this.errorMessage = "";
       this.navCtrl.navigateRoot('/home');
-      this.firebaseService.userDetails();
+      this.firebase.userDetails();
     }, err => {
       this.errorMessage = err.message;
-      alert(this.errorMessage);
-    })
+      // alert(this.errorMessage);      
+      alert('Usuário ou Senha inválidos')
+    })    
   }
   ngOnInit() {
   }
-
 }
