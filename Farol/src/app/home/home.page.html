@@ -15,19 +15,19 @@
             </ion-row>
             <ion-row *ngFor="let item of students">
                 <ion-col>
-                    <!-- {{ item.username }} -->
+                    {{ item.username }}
                 </ion-col>
                 <ion-col>
-                    <!-- {{ item.language }} -->
+                    {{ item.language }}
                 </ion-col>
             </ion-row>
         </ion-grid>
     </div>
-    <!-- <ion-card *ngFor="let item of students">
-      <ion-card-header>
-        <ion-card-title>{{ item.username }}<span> - Idioma </span> {{ item.language }}</ion-card-title>
-      </ion-card-header>
-  </ion-card> -->
+    <ion-card *ngFor="let item of students">
+        <ion-card-header>
+            <ion-card-title>{{ item.username }}<span> - Idioma </span> {{ item.language }}</ion-card-title>
+        </ion-card-header>
+    </ion-card>
     <ion-button (click)="logout()" fill="outline">Sair</ion-button>
 
 </ion-content>

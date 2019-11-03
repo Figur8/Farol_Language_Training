@@ -39,6 +39,8 @@ export class HomePage implements OnInit {
       console.log(this.students)
       
     });
+
+    console.log(this.crudService.userDetails().displayName);
   }
  
   logout(){
