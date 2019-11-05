@@ -6,6 +6,8 @@ import * as firebase from 'firebase/app';
   providedIn: 'root'
 })
 export class FirebaseConnectionService {
+  private user: Object;
+  private uSerInfoImplements: firebase.UserInfo;
 
   constructor(
     private firestore: AngularFirestore
@@ -21,6 +23,9 @@ export class FirebaseConnectionService {
       .then(
         res => resolve(res),
         err => reject(err))
+    }).then(()=>{
+      this.uSerInfoImplements = this.userDetails();
+      console.log(this.uSerInfoImplements.uid);
     })
    }
 
