@@ -15,7 +15,7 @@ export class LoginPage implements OnInit {
   private user: string;
   private credentials: JSON;
   private password: string;
-  private meuOvo: UserInfo;
+  
 
   constructor(
     public navCtrl: NavController, 
@@ -23,14 +23,7 @@ export class LoginPage implements OnInit {
     public firebase: FirebaseConnectionService,
     public fbAuth: AngularFireAuth) { 
     this.menu.enable(false);        
-    
-    this.fbAuth.auth.onAuthStateChanged((user) => {
-      if(user){
-        navCtrl.navigateRoot('/home')        
-      }else{
-        alert('usuário não logado')
-      }
-    })        
+       
   }
   
   loginUser(){   
@@ -39,8 +32,7 @@ export class LoginPage implements OnInit {
       console.log(res);
       this.errorMessage = "";
       this.navCtrl.navigateRoot('/home');
-      this.meuOvo = this.firebase.userDetails();
-      console.log(this.meuOvo.uid);
+      
     }, err => {
       this.errorMessage = err.message;
       // alert(this.errorMessage);      

@@ -1,17 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>register</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h2 text-center>Dados do Usuário</h2>
-  <div class="datas">      
-      <ion-input placeholder="E-mail" [(ngModel)]="userEmail"></ion-input>
-      <ion-input placeholder="Senha" [(ngModel)]="userPassword"></ion-input>
-  </div> 
-  <div class="botoes">
-      <ion-button fill="outline" (click)="register()">Cadastrar</ion-button>
-      <ion-button fill="outline" [routerLink]="['/login']">Voltar</ion-button>
-  </div>   
+    <h2 text-center>Dados do Usuário</h2>
+    <div class="datas">
+        <ion-input placeholder="E-mail" [(ngModel)]="userEmail"></ion-input>
+        <ion-input placeholder="Senha" [(ngModel)]="userPassword"></ion-input>
+        <ion-input placeholder="nome" [(ngModel)]="username"></ion-input>
+        <ion-input placeholder="idioma" [(ngModel)]="language"></ion-input>
+    </div>
+    <div class="botoes">
+        <ion-button fill="outline" (click)="register()">Cadastrar</ion-button>
+        <ion-button fill="outline" [routerLink]="['/login']">Voltar</ion-button>
+    </div>
 </ion-content>
