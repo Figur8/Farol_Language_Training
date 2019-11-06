@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
+import { UserInternal } from '../interfaces/userInternal';
 
 
 export interface userFirebase{
@@ -15,6 +16,7 @@ export interface userFirebase{
 export class FirebaseConnectionService {
   private user: Object;
   private uSerInfoImplements: firebase.UserInfo;
+  private userInternal: UserInternal;
 
   constructor(
     private firestore: AngularFirestore
@@ -24,19 +26,26 @@ export class FirebaseConnectionService {
     return this.firestore.collection('users').snapshotChanges();
   }
 
-  registerUser(userInternalInterfaceType){
+  registerUser(userInternalInterfaceType: UserInternal){
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(userInternalInterfaceType.email, userInternalInterfaceType.password)
       .then(
         res => resolve(res),
         err => reject(err))
-    }).then(()=>{
-      this.uSerInfoImplements = this.userDetails();
-      console.log(this.uSerInfoImplements.uid);
+    }).then((confirm) => {
+      this.uSerInfoImplements = confirm.user;
+      console.log("ele é esse", this.uSerInfoImplements.uid);
+      console.log("nome", userInternalInterfaceType.username, "lingua", userInternalInterfaceType.language);
+      this.userInternal = {
+        username: userInternalInterfaceType.username,
+        language: userInternalInterfaceType.language,
+        uuid: this.uSerInfoImplements.uid,
+      }
+      this.firestore.collection('/users/').add(userInternalInterfaceType);
     })
    }
 
-   loginUser(userInternalInterfaceType){
+   loginUser(userInternalInterfaceType: UserInternal){
     return new Promise<any>((resolve, reject) => {
       firebase.auth().signInWithEmailAndPassword(userInternalInterfaceType.email, userInternalInterfaceType.password)
       .then(

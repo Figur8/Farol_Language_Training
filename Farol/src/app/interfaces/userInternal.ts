@@ -3,5 +3,5 @@ export interface UserInternal {
     password?: string;
     language: string;
     username: string;
-    uuid: string;
+    uuid?: string;
 }

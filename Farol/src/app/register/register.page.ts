@@ -22,22 +22,17 @@ export class RegisterPage implements OnInit {
   constructor(
     private fbAuth: AngularFireAuth,
     private fireBaseStore: AngularFirestore,
-    public firebase: FirebaseConnectionService,) {
+    public firebase: FirebaseConnectionService, ) {
   }
 
-  register(): Promise<any> {
-    return this.fbAuth.auth.createUserWithEmailAndPassword(this.userEmail, this.userPassword)
-      .then((confirm) => {
-        this.userInfoImplements = confirm.user;
-        console.log("ele é esse", this.userInfoImplements.uid);
-        console.log("nome", this.username, "lingua", this.language);
-        this.userRegister = {
-          language: this.username,
-          username: this.language,
-          uuid: this.userInfoImplements.uid
-        }
-        this.fireBaseStore.collection('/users/').add(this.userRegister);
-      })
+  register(){
+    this.userRegister = {
+      username: this.username,
+      email: this.userEmail,
+      password: this.userPassword,
+      language: this.language
+    }
+    this.firebase.registerUser(this.userRegister);
   }
   ngOnInit() {
   }
