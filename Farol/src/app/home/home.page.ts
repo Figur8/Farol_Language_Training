@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController, NavController } from '@ionic/angular';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { User } from 'firebase';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -20,12 +21,10 @@ export class HomePage implements OnInit {
     private menu: MenuController,
     private fbAuth: AngularFireAuth) { 
     this.menu.enable(true);
-
     }
  
   ngOnInit() {
     this.crudService.read_Students().subscribe(data => {
- 
       this.students = data.map(e => {
         return {
           id: e.payload.doc.id,

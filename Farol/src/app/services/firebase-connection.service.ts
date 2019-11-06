@@ -2,6 +2,13 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase/app';
 
+
+export interface userFirebase{
+  language: string;
+  username: string;
+  uuid: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -29,9 +36,9 @@ export class FirebaseConnectionService {
     })
    }
 
-   loginUser(email: string, password: string){
+   loginUser(value){
     return new Promise<any>((resolve, reject) => {
-      firebase.auth().signInWithEmailAndPassword(email, password)
+      firebase.auth().signInWithEmailAndPassword(value.email, value.password)
       .then(
         res => resolve(res),
         err => reject(err))
