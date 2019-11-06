@@ -24,9 +24,9 @@ export class FirebaseConnectionService {
     return this.firestore.collection('users').snapshotChanges();
   }
 
-  registerUser(value){
+  registerUser(userInternalInterfaceType){
     return new Promise<any>((resolve, reject) => {
-      firebase.auth().createUserWithEmailAndPassword(value.email, value.password)
+      firebase.auth().createUserWithEmailAndPassword(userInternalInterfaceType.email, userInternalInterfaceType.password)
       .then(
         res => resolve(res),
         err => reject(err))
@@ -36,9 +36,9 @@ export class FirebaseConnectionService {
     })
    }
 
-   loginUser(value){
+   loginUser(userInternalInterfaceType){
     return new Promise<any>((resolve, reject) => {
-      firebase.auth().signInWithEmailAndPassword(value.email, value.password)
+      firebase.auth().signInWithEmailAndPassword(userInternalInterfaceType.email, userInternalInterfaceType.password)
       .then(
         res => resolve(res),
         err => reject(err))
