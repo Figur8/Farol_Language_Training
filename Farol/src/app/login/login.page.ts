@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, MenuController } from '@ionic/angular';
 import { FirebaseConnectionService } from '../services/firebase-connection.service';
 import { UserInternal } from '../interfaces/userInternal';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,26 +10,16 @@ import { UserInternal } from '../interfaces/userInternal';
 })
 export class LoginPage implements OnInit {
   errorMessage: string = '';
-  private userInternal: UserInternal
+  private userLogin: UserInternal = {}
 
-  constructor(
-    public navCtrl: NavController,
+  constructor(    
     public menu: MenuController,
     public firebase: FirebaseConnectionService,) {
     this.menu.enable(false);
   }
 
   loginUser() {
-    this.firebase.loginUser(this.userInternal)
-      .then(res => {
-        console.log(res);
-        this.errorMessage = "";
-        this.navCtrl.navigateRoot('/home');
-      }, err => {
-        this.errorMessage = err.message;
-        // alert(this.errorMessage);      
-        alert('Usuário ou Senha inválidos')
-      })
+    this.firebase.login(this.userLogin)
   }
   ngOnInit() {
   }
