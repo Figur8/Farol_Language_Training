@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserInternal } from '../interfaces/userInternal';
-import { Observable } from 'rxjs/internal/Observable';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { LoadingController, ToastController } from '@ionic/angular';
 
@@ -34,6 +33,11 @@ export class FirebaseConnectionService {
     });
     toast.present();
   }
+
+  read_Students(){
+    return this.firebaseFirestore.collection('users').snapshotChanges()
+  }
+
   // Recebo um usuário da minha interface e registro passando o obejto
   async register(user : UserInternal, idioma : string) {
     this.msgLoading = "Registrando..."
