@@ -15,7 +15,7 @@ export class RegisterPage implements OnInit {
   }
 
   register(){   
-    this.firebase.register(this.userRegister, this.userRegister.language);
+    this.firebase.register(this.userRegister);
   }
   ngOnInit() {
   }

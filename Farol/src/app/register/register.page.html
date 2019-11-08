@@ -7,10 +7,10 @@
 <ion-content>
     <h2 text-center>Dados do Usuário</h2>
     <div class="datas">
-        <ion-input placeholder="E-mail" [(ngModel)]="userEmail"></ion-input>
-        <ion-input placeholder="Senha" [(ngModel)]="userPassword"></ion-input>
-        <ion-input placeholder="nome" [(ngModel)]="username"></ion-input>
-        <ion-input placeholder="idioma" [(ngModel)]="language"></ion-input>
+        <ion-input placeholder="E-mail" [(ngModel)]="userRegister.email"></ion-input>
+        <ion-input placeholder="Senha" [(ngModel)]="userRegister.password"></ion-input>
+        <ion-input placeholder="nome" [(ngModel)]="userRegister.username"></ion-input>
+        <ion-input placeholder="idioma" [(ngModel)]="userRegister.language"></ion-input>
     </div>
     <div class="botoes">
         <ion-button fill="outline" (click)="register()">Cadastrar</ion-button>

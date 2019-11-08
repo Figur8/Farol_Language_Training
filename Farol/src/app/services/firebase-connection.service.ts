@@ -39,11 +39,11 @@ export class FirebaseConnectionService {
   }
 
   // Recebo um usuário da minha interface e registro passando o obejto
-  async register(user : UserInternal, idioma : string) {
+  async register(user : UserInternal) {
     this.msgLoading = "Registrando..."
     await this.presentLoading(this.msgLoading)
     // Aqui fiz uma validação meio na gambiarra pro idioma ele não registra se não colocar o idioma.
-    if(idioma == null || idioma == ''){
+    if(user.language == null || user.language == ''){
       this.loading.dismiss()
       let idioma = 'Você precisa preencher o campo Idioma Nativo!'
       this.presentToast(idioma)
