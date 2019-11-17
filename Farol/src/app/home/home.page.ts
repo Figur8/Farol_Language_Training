@@ -41,7 +41,7 @@ export class HomePage implements OnInit {
   }
  
   logout(){
-    this.crudService.logoutUser()
+    this.crudService.logout()
     this.navCtrl.navigateRoot('/login')
   }
  
