@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <!-- <ion-menu-button></ion-menu-button> -->
+        </ion-buttons>
+        <ion-title>Farol 2.0</ion-title>
+        <ion-buttons slot="end">
+            <ion-button expand="block" (click)="logout()">Sair</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-item lines="none">
+                        <ion-button routerLink="/chat"></ion-button>
+                        <!-- <ion-img src="assets/img/talk.png"></ion-img> -->
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <div class="select" lines="none">
+                        <ion-label>Qual idioma deseja treinar?</ion-label>
+                        <ion-select placeholder="Selecione...">
+                            <ion-select-option *ngFor="let idioma of idiomas">{{ idioma }}</ion-select-option>
+                        </ion-select>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="developer">
+        <ion-label>Instruções:</ion-label>
+        <p>1 - Selecione o idioma <br /> 2 - Toque em TALK</p>
+    </div>
+</ion-content>

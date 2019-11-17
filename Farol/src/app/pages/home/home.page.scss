@@ -1,0 +1,72 @@
+ion-content{
+  margin: 0;
+  padding: 0;    
+  height: 100%;
+}
+.container{
+  display: grid;    
+  justify-content: center;
+  margin: 10px;
+  margin-top: 40px;
+  padding: 10px;      
+  height: 60%;   
+  ion-grid{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  ion-item{
+      width: 100%;
+      height: 100%;
+      display: grid;
+      justify-content: center;        
+      ion-button{
+          padding: 5px;
+          text-align: center;
+          margin: 0 auto;
+          width: 250px;
+          height: 250px;
+          // --border-radius: 50%;
+          --background: transparent;                                     
+          --box-shadow: none;
+          background-image: url('../../../assets/img/talk.png');            
+          background-size: contain no-repeat;
+      }
+  }       
+}
+.select{    
+  margin: 0 auto;
+  max-width: 650px;    
+  height: 90px;
+  margin-top: 0;
+  display: grid;
+  justify-content: center;    
+  align-content: center;
+  ion-label{
+      margin-bottom: 10px;
+  }
+}
+.developer{
+  border: 1px solid #5986ca7e;
+  border-style: dashed;
+  border-radius: 10px;
+  background-color: #5986ca53 ;
+  position: absolute;
+  height: 120px;
+  right: 0;    
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  display: grid;    
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  ion-label{
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+  }
+  p{
+      color: white;
+  }
+}

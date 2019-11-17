@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserInternal } from '../interfaces/userInternal';
-import { FirebaseConnectionService } from '../services/firebase-connection.service';
+import { FirebaseConnectionService } from '../../services/firebase-connection.service';
+import { UserInternal } from '../../interfaces/userInternal';
 
 @Component({
   selector: 'app-register',

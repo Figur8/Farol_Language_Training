@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UserInternal } from '../interfaces/userInternal';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController, ToastController, NavController } from '@ionic/angular';
+import { map } from 'rxjs/operators'
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,11 @@ import { LoadingController, ToastController } from '@ionic/angular';
 export class FirebaseConnectionService {  
   private loading: any
   private msgLoading : string
+  private user: UserInternal  
 
   constructor(
     private auth: AngularFireAuth,
+    private navCtrl: NavController,
     private firebaseFirestore: AngularFirestore,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController
@@ -34,8 +37,17 @@ export class FirebaseConnectionService {
     toast.present();
   }
 
-  read_Students(){
-    return this.firebaseFirestore.collection('users').snapshotChanges()
+  read_Students(){    
+     this.firebaseFirestore.collection('users').snapshotChanges().pipe(
+       map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data()
+          const id = a.payload.doc.id
+
+          return { id, ...data }
+        })
+       })
+     )
   }
 
   // Recebo um usuário da minha interface e registro passando o obejto
@@ -50,6 +62,7 @@ export class FirebaseConnectionService {
     }else{
       try {
         await this.auth.auth.createUserWithEmailAndPassword(user.email, user.password)
+        user.uuid = this.auth.auth.currentUser.uid           
         this.sendParameters(user)
         console.log(this.auth.user)
       } catch (error) {
@@ -72,14 +85,15 @@ export class FirebaseConnectionService {
       }
     }
   }
-  sendParameters(user : UserInternal) {    
+  sendParameters(user : UserInternal) {        
     this.firebaseFirestore.collection('/users/').add(user)
   }
   async login(user: UserInternal) {
     this.msgLoading = "Efetuando Login..."
     await this.presentLoading(this.msgLoading)
     try {
-      await this.auth.auth.signInWithEmailAndPassword(user.email, user.password)
+      await this.auth.auth.signInWithEmailAndPassword(user.email, user.password)      
+      this.navCtrl.navigateRoot('/home')        
     } catch (error) {
       console.log(error.code)
       let message = error.code
@@ -110,5 +124,5 @@ export class FirebaseConnectionService {
   }
   getAuth() {
     return this.auth.auth
-  }
+  }  
 }
