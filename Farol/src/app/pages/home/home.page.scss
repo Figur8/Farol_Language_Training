@@ -21,19 +21,20 @@ ion-content{
       display: grid;
       justify-content: center;        
       button{
-          // padding: 5px;          
-          background: white;
+          // padding: 5px;                              
           text-align: center;
           margin: 0 auto;
           width: 250px;
           height: 250px;                    
           --box-shadow: none;
+          background: transparent;
           background-image: url('../../../assets/img/talk.png');            
           background-size: contain no-repeat;                              
       }
       button:hover{
         background-image: url('../../../assets/img/talk2.png');
       }
+     
   }       
 }
 .select{    
