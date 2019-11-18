@@ -1,6 +1,12 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>register</ion-title>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Novo Usuário</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
@@ -13,7 +19,7 @@
         <ion-input placeholder="idioma" [(ngModel)]="userRegister.language"></ion-input>
     </div>
     <div class="botoes">
-        <ion-button fill="outline" (click)="register()">Cadastrar</ion-button>
-        <ion-button fill="outline" [routerLink]="['/login']">Voltar</ion-button>
+        <ion-button (click)="register()">Cadastrar</ion-button>
+        <ion-button [routerLink]="['/login']">Voltar</ion-button>
     </div>
 </ion-content>

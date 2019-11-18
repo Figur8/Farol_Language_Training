@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { NavParams, ToastController } from '@ionic/angular'
-import { Observable } from 'rxjs/internal/Observable';
-import { UserInternal } from 'src/app/interfaces/userInternal';
 
 @Component({
   selector: 'app-chat',

@@ -1,22 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
 <ion-content>
-    <div class="ion-padding">
+    <ion-grid>
         <div class="logo">
-            <ion-img src="assets/farol5.png"></ion-img>
-            <div class="slogan">
-                <ion-label>A luz para seu estudo!</ion-label>
-            </div>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-item lines="none">
+                        <ion-img src="assets/img/farol5.png"></ion-img>
+                    </ion-item>
+                    <span>Farol 2.0</span>
+                    <ion-item lines="none">
+                        <ion-label>A luz para seu estudo!</ion-label>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
         </div>
         <div class="login">
-            Usuário
-            <ion-input name="user" [(ngModel)]="userLogin.email" type="text" id="user"></ion-input>
-            Senha
-            <ion-input name="password" [(ngModel)]="userLogin.password" type="password" id="pass"></ion-input>
+            <ion-row>
+                <ion-col>
+                    <ion-item lines="none">
+                        <ion-input [(ngModel)]="userLogin.email" type="email" placeholder="Email"></ion-input>
+                    </ion-item>
+                    <ion-item lines="none">
+                        <ion-input [(ngModel)]="userLogin.password" type="password" placeholder="Senha"></ion-input>
+                    </ion-item>
+                    <ion-button expand="block" (click)="loginUser()">Logar</ion-button>
+                    <div class="footer">
+                        <ion-label>Não tem conta?<span><a href="/register"> Clique Aqui!</a></span></ion-label>
+                    </div>
+                </ion-col>
+            </ion-row>
         </div>
-        <div class="botao">
-            <ion-button (click)="loginUser()">Logar</ion-button>
-        </div>
-        <div class="criarconta">
-            <ion-label>Não tem conta?<span><a href="/register">Clique Aqui!</a></span></ion-label>
-        </div>
-    </div>
+    </ion-grid>
 </ion-content>

@@ -10,12 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { FirebaseConnectionService } from './services/firebase-connection.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore'
+import { MenuPageModule } from './pages/menu/menu.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,15 +24,15 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase), 
     AngularFireAuthModule,
+    MenuPageModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    FirebaseConnectionService,    
+    FirebaseConnectionService, 
+    AngularFirestore,   
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

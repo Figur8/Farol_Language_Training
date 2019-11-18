@@ -127,13 +127,7 @@ export class FirebaseConnectionService {
     this.navCtrl.navigateRoot('/login')
   }
   getAuth() {
-    return this.auth.auth.onAuthStateChanged((user) => {
-      if(user){        
-        console.log(user.uid)
-      }else{
-        console.log('Nenhum usuário')
-      }
-    })
+   return this.auth.auth
   }
 
   getAll() {

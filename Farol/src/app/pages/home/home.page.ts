@@ -27,6 +27,10 @@ export class HomePage implements OnInit {
       this.auth.user.subscribe((data) => { this.currentUser = data, console.log(data) })                
     }
  
+  openMenu(){
+    document.querySelector('ion-menu-controller')
+    .open()
+  }
   ngOnInit() {                   
   }  
   

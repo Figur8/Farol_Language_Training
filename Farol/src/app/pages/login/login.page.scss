@@ -1,60 +1,70 @@
-ion-title{
-    font-size: 20px;
-    text-align: center;
-}
-.ion-padding{
+ion-content{
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
 }
-.logo{
-    text-align: center;
-    font-size: 12px;
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    margin-top: 40px;
-
-    img{
-        margin-bottom: 5px;
-    }  
-}  
-.slogan{
-    margin-top: 20px;
-    ion-label{
-        font-size: 12px;  
-        font-style: italic;
-    }
+ion-grid{
+    margin: 0;
+    padding: 0;    
 }
-.login{
-    margin-top: 30px;    
+ion-row{
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
-    ion-input{
-        margin: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 10px;
+    max-width: 90%;
+    ion-col{
+        margin: 0 auto;
+        padding: 0;                                                           
+        max-width: 90%;
         text-align: center;
-        width: 50%;
-        border: 1px solid black;                
     }
 }
-.botao{
+ion-item{
+    margin: 0 auto;    
+    max-width: 90%;
+    text-align: center;    
+}
+span{
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+}
+ion-img{
+    margin: 0 auto;
+    max-width: 513px;
+    padding: 10px;
+}
+ion-label{
     text-align: center;
-    margin-top: 10px;
-    ion-button{    
-        border-radius: 40px;
-        width: 50%;        
-    }
-    ion-button:hover{
-        background-color: gray;
-    }
+    margin-top: 0;    
 }
-    
+ion-input{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    max-width: 90%;
+    border: 1px solid black;
+    border-radius: 10px;    
+}
+ion-button{
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 75%;
+    --border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
 
-.criarconta{
-    font-size: 12px;
-    margin-top: 10px;
-    text-align: center;
+.footer{
+margin-top: 20px;   
+    ion-label{
+        font-size: 14px;
+        a{
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
 }
