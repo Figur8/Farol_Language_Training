@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Message } from '../../interfaces/message'
+
 
 @Component({
   selector: 'app-chat',
@@ -7,9 +9,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./chat.page.scss'],
 })
 export class ChatPage implements OnInit {
-    
-  private message: string
-  private messages = new Array<any>()  
+      
+  private message: Message = {}
+  private texto: string
+  private messages = new Array<Message>()
   private currentUser: any
 
   constructor(
@@ -19,6 +22,19 @@ export class ChatPage implements OnInit {
   }
   
   ngOnInit() {
+  }
+
+  getMessage(){
+    
+  }
+
+  sendMessage(){
+    if(this.message !== ''){
+      this.message.user = this.currentUser.displayName
+      this.message.message = this.texto
+      this.messages.push(this.message)    
+      this.texto = null          
+    }
   }
 
 }

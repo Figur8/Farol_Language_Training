@@ -3,8 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Chat - Farol 2.0</ion-title>
-    <span>{{ currentUser.email }}</span>
+    <ion-title>Chat - {{ currentUser.displayName }} </ion-title>    
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +12,7 @@
     <ion-row *ngFor="let msg of messages">
       <ion-col col-9 [attr.offset-3]="msg.user != user ? '' : null" [attr.text-right]="msg.user != user ? '' : null"
         [ngClass]="msg.user === user ? 'logged' : 'other'">
-        <p><strong>{{ msg.user }}</strong>: {{ msg.message }}</p>
-        <p>{{ msg.date | date: "dd/MM/yyyy hh:mm:ss" }}</p>
+        <p><strong>{{ msg.user }}</strong>: {{ msg.message }}</p>        
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -22,8 +20,8 @@
 <ion-footer>
   <ion-toolbar>
     <ion-item no-lines>
-      <ion-input type="text" [(ngModel)]="message" placeholder="Digite aqui sua mensagem..."></ion-input>
-      <ion-button item-end clear icon-only [disabled]="!message || !message.length" (click)="sendMessage()">
+      <ion-input type="text" [(ngModel)]="texto" placeholder="Digite aqui sua mensagem..."></ion-input>
+      <ion-button item-end clear icon-only [disabled]="!texto || !texto.length" (click)="sendMessage()">
         <ion-icon name="send"></ion-icon>
       </ion-button>
     </ion-item>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseConnectionService } from 'src/app/services/firebase-connection.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +9,7 @@ import { FirebaseConnectionService } from 'src/app/services/firebase-connection.
 })
 export class MenuPage implements OnInit {
 
+  public currentUser: any
   botoes = [
     {
       title: 'Dashboard',      
@@ -24,8 +26,9 @@ export class MenuPage implements OnInit {
   ]
 
   constructor(
-    private authService: FirebaseConnectionService
-  ) { }
+    private authService: FirebaseConnectionService,
+    private auth: AngularFireAuth
+  ) {   this.auth.user.subscribe((data) => { this.currentUser = data, console.log(data) }) }
 
   logout(){
     this.authService.logout()

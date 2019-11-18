@@ -66,8 +66,7 @@ export class FirebaseConnectionService {
       try {
         await this.auth.auth.createUserWithEmailAndPassword(user.email, user.password)
         user.uuid = this.auth.auth.currentUser.uid        
-        this.sendParameters(user)
-        console.log(this.auth.user)
+        this.sendParameters(user)                        
       } catch (error) {
         console.log(error)
         let message: string
@@ -85,11 +84,17 @@ export class FirebaseConnectionService {
         this.presentToast(message)
       } finally {
         this.loading.dismiss()
+        // this.navCtrl.navigateRoot('/menu')
       }
     }
   }
   sendParameters(user: UserInternal) {    
-    this.firebaseFirestore.collection('/users/').add(user)
+    // updateProfile é onde eu modificio os paramentros internos do currentuser
+    this.auth.auth.currentUser.updateProfile({
+      displayName: user.username,
+      photoURL: '',            
+    })
+    this.firebaseFirestore.collection('users').add(user)
   }
   async login(user: UserInternal) {
     this.msgLoading = "Efetuando Login..."

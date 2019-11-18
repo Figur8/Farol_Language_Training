@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseConnectionService } from '../../services/firebase-connection.service';
 import { UserInternal } from '../../interfaces/userInternal';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,8 @@ export class RegisterPage implements OnInit {
   private userRegister: UserInternal = {}
 
   constructor(    
-    public service: FirebaseConnectionService, ) {
+    public service: FirebaseConnectionService,
+    private navCtrl: NavController ) {
   }
 
   register(){   

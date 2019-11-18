@@ -1,10 +1,9 @@
 <ion-header>
-    <ion-toolbar color="primary" *ngIf="currentUser != null">
+    <ion-toolbar color="primary">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>Farol</ion-title>
-        <span>{{ currentUser.email }}</span>
         <ion-buttons slot="end">
             <ion-button expand="block" (click)="logout()">Sair</ion-button>
         </ion-buttons>
@@ -32,7 +31,8 @@
             </ion-row>
             <ion-row>
                 <ion-col>
-                    <div class="select" lines="none">
+                    <div class="select" lines="none" *ngIf="currentUser != null">
+                        <span>Bem vindo! {{ currentUser.displayName }}</span>
                         <ion-label>Qual idioma deseja treinar?</ion-label>
                         <ion-select placeholder="Selecione...">
                             <ion-select-option *ngFor="let idioma of idiomas">{{ idioma }}</ion-select-option>

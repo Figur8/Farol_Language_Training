@@ -47,6 +47,20 @@ ion-content{
   align-content: center;
   ion-label{
       margin-bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+  }
+  span{
+    font-size: 18px;    
+    margin-bottom: 5px;
+    text-align: center;
+    color: var(--ion-color-primary);
+  }
+  ion-select{
+    font-size: 14px;
+    ion-select-option{
+      font-size: 14px;
+    }
   }
 }
 .developer{
