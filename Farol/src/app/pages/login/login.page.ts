@@ -15,12 +15,12 @@ export class LoginPage implements OnInit {
 
   constructor(    
     public menu: MenuController,
-    public firebase: FirebaseConnectionService,) {
+    public service: FirebaseConnectionService,) {
     this.menu.enable(false);
   }
 
   loginUser() {
-    this.firebase.login(this.userLogin)          
+    this.service.login(this.userLogin)          
   }
   ngOnInit() {
   }

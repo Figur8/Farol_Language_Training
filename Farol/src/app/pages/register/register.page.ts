@@ -11,11 +11,11 @@ export class RegisterPage implements OnInit {
   private userRegister: UserInternal = {}
 
   constructor(    
-    public firebase: FirebaseConnectionService, ) {
+    public service: FirebaseConnectionService, ) {
   }
 
   register(){   
-    this.firebase.register(this.userRegister);
+    this.service.register(this.userRegister);
   }
   ngOnInit() {
   }

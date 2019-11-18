@@ -1,9 +1,10 @@
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="primary" *ngIf="currentUser != null">
         <ion-buttons slot="start">
-            <!-- <ion-menu-button></ion-menu-button> -->
+            <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>Farol 2.0</ion-title>
+        <ion-title>Farol</ion-title>
+        <span>{{ currentUser.email }}</span>
         <ion-buttons slot="end">
             <ion-button expand="block" (click)="logout()">Sair</ion-button>
         </ion-buttons>
@@ -11,13 +12,21 @@
 </ion-header>
 
 <ion-content>
+    <!-- <ion-card *ngFor="let user of users">
+        <ion-card-header *ngIf="currentUser != null">{{ user.username }}</ion-card-header>
+        <ion-card-content>{{ user.email }}</ion-card-content>        
+    </ion-card>
+    <div *ngIf="currentUser != null">
+            <h3>Bem Vindo: {{ currentUser.displayName }}</h3>
+    </div>
+     -->
+    
     <div class="container">
         <ion-grid>
             <ion-row>
                 <ion-col>
                     <ion-item lines="none">
-                        <ion-button routerLink="/chat"></ion-button>
-                        <!-- <ion-img src="assets/img/talk.png"></ion-img> -->
+                        <button routerLink="/chat"></button>
                     </ion-item>
                 </ion-col>
             </ion-row>
